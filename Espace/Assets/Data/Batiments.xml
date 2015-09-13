@@ -9,7 +9,7 @@
 		<Poids>200</Poids>
 		<Prefab>BatimentMoche</Prefab>
 		<Effet>
-			<Type>Produire</Type>
+			<Type>PRODUIRE</Type>
 			<Ressource>Eau</Ressource>
 			<Quantite>10</Quantite>
 		</Effet>
@@ -22,7 +22,7 @@
 		<Poids>175</Poids>
 		<Prefab>BatimentMoche</Prefab>
 		<Effet>
-			<Type>Population</Type>
+			<Type>POPULATION</Type>
 			<Quantite>20</Quantite>
 		</Effet>
 	</Batiment>
