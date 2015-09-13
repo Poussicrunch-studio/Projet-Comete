@@ -40,6 +40,21 @@ namespace AssemblyCSharp
 			foreach (XmlNode node in nodes) 
 			{
 				Evenement a = new Evenement();
+				a.nom = node.SelectSingleNode ("Nom").InnerText;
+				a.description = node.SelectSingleNode ("description").InnerText;
+				a.choix = bool.Parse(node.SelectSingleNode ("choix").InnerText);
+				a.choix = node.SelectSingleNode ("choix1").InnerText;
+				a.choix = node.SelectSingleNode ("choix2").InnerText;
+				a.choix = node.SelectSingleNode ("choix3").InnerText;
+				foreach(XmlNode node in node.SelectSingleNode ("terrain"))
+				{
+					ConditionTerrain b = new ConditionTerrain();
+					b.type = Terrains.Parse(node.SelectSingleNode ("type").InnerText);
+					b.requis = bool.Parse (node.SelectSingleNode ("requis").InnerText);
+					b.poid = int.Parse (node.SelectSingleNode ("poid").InnerText);
+					a.conditionT.Add (b);
+				}
+					
 			}
 
 			

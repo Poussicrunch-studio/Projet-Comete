@@ -11,18 +11,13 @@ using System;
 using System.Collections.Generic;
 namespace AssemblyCSharp
 {
-	public class Evenement
+	public class ConditionTerrain
 	{
-		public string nom;
-		public string description;
-		public bool important;
-		public bool choix;
-		public string choix1;
-		public string choix2;
-		public string choix3;
-		public List<ConditionTerrain> conditionT;
+		public Terrains type;
+		public bool requis;
+		public int poid;
 
-		public Evenement ()
+		public ConditionTerrain ()
 		{
 
 		}

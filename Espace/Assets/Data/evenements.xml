@@ -10,6 +10,7 @@
 		<choix2></choix2>
 		<choix3></choix3>
 		<terrain>
+			<type></type>
 			<requis></requis> 			<!-- OUI/NON -->
 			<poid></poid>				<!-- importance de ce facteur dans l'apparition de cet event (positif ou negatif)-->
 		</terrain>
