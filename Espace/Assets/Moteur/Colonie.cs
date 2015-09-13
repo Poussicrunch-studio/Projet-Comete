@@ -16,6 +16,7 @@ namespace AssemblyCSharp
 	public class Colonie
 	{
 		Dictionary<Ressources, float> reserves = new Dictionary<Ressources, float>();
+		List<Conseiller> conseillers = new List<Conseiller>();
 
 		public Colonie ()
 		{

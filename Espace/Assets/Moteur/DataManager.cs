@@ -33,6 +33,10 @@ namespace AssemblyCSharp
 
 			Debug.Log ("Démarrage du chargement des données de jeu...");
 			Debug.Log (Application.dataPath + "/Data");
+
+			//Chargement des autres fichiers
+			loadBatiments ();
+
 			XmlDocument doc = new XmlDocument ();
 			//doc.Load (dataPath + "/Batiments.xml");
 			doc.Load (dataPath + "/evenements.xml");
@@ -70,6 +74,18 @@ namespace AssemblyCSharp
 
 			
 			Debug.Log ("Fin du chargement des données de jeu...");
+		}
+
+		public void loadBatiments() {
+			XmlDocument doc = new XmlDocument ();
+			doc.Load (dataPath + "/Batiments.xml");
+			XmlNodeList nodes = doc.DocumentElement.ChildNodes;
+			foreach (XmlNode node in nodes) {
+				TypeDeBatiment b = new TypeDeBatiment();
+
+				typesDeBatiment.Add(b);
+			}
+
 		}
 
 

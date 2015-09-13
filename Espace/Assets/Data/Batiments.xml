@@ -5,6 +5,7 @@
 	<Batiment>
 		<Name>Forage</Name>
 		<Categorie>MINISTRE</Categorie>
+		<Niveau>0</Niveau>
 		<Effet>
 			<Type>Produire</Type>
 			<Ressource>Eau</Ressource>
@@ -15,6 +16,7 @@
 	<Batiment>
 		<Name>Complexe d'habitation</Name>
 		<Categorie>GOUVERNEUR</Categorie>
+		<Niveau>0</Niveau>
 		<Effet>
 			<Type>Population</Type>
 			<Quantite>20</Quantite>

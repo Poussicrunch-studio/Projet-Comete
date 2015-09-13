@@ -13,9 +13,10 @@ namespace AssemblyCSharp
 	public class Conseiller
 	{
 
-		public int fiabilité = 1;
-		public int education = 1;
-		public int inventivité = 1;
+		public int fiabilité = 0;
+		public int education = 0;
+		public int inventivité = 0;
+		public CategoriesConseiller categorie;
 
 		public Conseiller ()
 		{
