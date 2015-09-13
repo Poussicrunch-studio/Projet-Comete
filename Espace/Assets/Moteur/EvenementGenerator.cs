@@ -61,7 +61,7 @@ namespace AssemblyCSharp
 		}
 			System.Random rnd2r2 = new System.Random();
 			int destin = rnd2r2.Next(0, poidTotal);
-			Evenement enCours;
+			Evenement enCours=null;
 			while(destin>0)
 			{
 				foreach(Evenement e in DataManager.dataManager.listEvenement)
