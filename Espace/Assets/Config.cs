@@ -9,6 +9,7 @@ namespace AssemblyCSharp
 
 		public Config ()
 		{
+
 		}
 	}
 }
