@@ -7,7 +7,8 @@ namespace AssemblyCSharp
 {
 	public class EvenementGenerator
 	{
-		int entropie;							//pourcentage de chance de popage d'un event
+		int entropie; 							//pourcentage de chance de popage d'un event
+		int poidTotal;
 		public EvenementGenerator instance;
 
 		public EvenementGenerator ()
@@ -22,6 +23,7 @@ namespace AssemblyCSharp
 
 		public void testEvent()
 		{
+			poidTotal=0;
 			System.Random rnd = new System.Random();
 			int test = rnd.Next(0, 100);
 			if(entropie >= test)				//si oui alors faire tout les test de poids d'event sur la case et en tirer un au hasard

@@ -4,6 +4,19 @@
 	<Evenement>
 		<Name></Name>
 		<description></description>
+		<important></important>			<!-- OUI/NON (popage au milieu de l'écran) -->
+		<choix></choix>					<!-- OUI/NON -->
+		<choix1></choix1>
+		<choix2></choix2>
+		<choix3></choix3>
+		<terrain>
+			<requis></requis> 			<!-- OUI/NON -->
+			<poid></poid>				<!-- importance de ce facteur dans l'apparition de cet event (positif ou negatif)-->
+		</terrain>
+		<ressource>
+			<type></type>				<!-- selon l'enum ressources -->
+			<requis></requis>			<!-- OUI/NON -->
+		</ressource>	
 	</Evenement>
 
 
