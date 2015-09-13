@@ -15,8 +15,22 @@ namespace AssemblyCSharp
 {
 	public class Colonie
 	{
+		Dictionary<Ressources, float> reserves = new Dictionary<Ressources, float>();
+
 		public Colonie ()
 		{
+			foreach (Ressources ressource in Enum.GetValues(typeof(Ressources))) {
+				reserves.Add(ressource,0.0f);
+				}
+
+			reserves.Remove (Ressources.NOURRITURE);
+			reserves.Add (Ressources.NOURRITURE,100.0F);
+
+			reserves.Remove (Ressources.EAU);
+			reserves.Add (Ressources.EAU,100.0F);
+
+			reserves.Remove (Ressources.OXYGENE);
+			reserves.Add (Ressources.OXYGENE,50.0F);
 		}
 	}
 }
