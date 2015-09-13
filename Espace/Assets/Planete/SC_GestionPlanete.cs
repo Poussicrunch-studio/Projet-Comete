@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using AssemblyCSharp;
 
@@ -15,6 +16,10 @@ public class SC_GestionPlanete : MonoBehaviour {
 
 	public GestionnaireDePartie gestionnaire; /*Le gestionnaire s'occupe de gerer tout le jeu "interne", pas les graphismes*/
 
+	//Pour l'interface
+	public Case kaseSelectionnee;
+	public Text xDeLaCase;
+	public Text yDeLaCase;
 
 	/* Je propose une terminologie pour manipuler les hexagones :
 	 * l'hexagone++ d'un hexagone donné est celui positionné en haut à droite (+x+y)
@@ -57,7 +62,30 @@ public class SC_GestionPlanete : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Debug.Log ("my test");
+
+		gererLaSouris ();
 	}
+
+
+	public void gererLaSouris() {
+		if (Input.GetMouseButtonDown(0))
+		{
+
+			RaycastHit hitInfo = new RaycastHit();
+			bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
+			if (hit) 
+			{
+				Debug.Log("Hit " + hitInfo.transform.gameObject.name);
+				if (hitInfo.transform.gameObject.tag == "Case")
+				{
+					kaseSelectionnee = hitInfo.transform.gameObject.GetComponent<SC_Case>().kase;
+					xDeLaCase.text = kaseSelectionnee.coordX.ToString();
+					yDeLaCase.text = kaseSelectionnee.coordY.ToString();
+				}
+			}
+		} 
+	}
+
 
 	public void instancierUnHexagone(int x, int y) {
 
@@ -71,8 +99,10 @@ public class SC_GestionPlanete : MonoBehaviour {
 		Transform t = Instantiate(modeleTuile, new Vector3(x * longueurXTuile, y * longueurYTuile + yModifie, 0.0f), Quaternion.identity) as Transform;
 		Case kase = new Case (t.gameObject,x,y);
 		gestionnaire.ajouterUneCase (kase);
+		SC_Case script = t.gameObject.GetComponent<SC_Case>();
+		script.kase = kase;
 	}
-
+	
 	public void instancierUnHexagone (int position, Case caseInitiale ) {
 		int decalX, decalY;
 
