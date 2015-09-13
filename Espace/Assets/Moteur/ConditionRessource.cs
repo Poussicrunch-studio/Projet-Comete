@@ -8,24 +8,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
 namespace AssemblyCSharp
 {
-	public class Evenement
+	public class ConditionRessource
 	{
-		public string nom;
-		public string description;
-		public bool important;
-		public bool choix;
-		public string choix1;
-		public string choix2;
-		public string choix3;
-		public List<ConditionTerrain> conditionT;
-		public List<ConditionRessource> conditionR;
+		public Ressources type;
+		public bool requis;
+		public int combien;
 
-		public Evenement ()
+		public ConditionRessource ()
 		{
-
 		}
 	}
 }

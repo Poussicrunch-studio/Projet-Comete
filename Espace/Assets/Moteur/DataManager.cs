@@ -55,6 +55,15 @@ namespace AssemblyCSharp
 					b.poid = int.Parse (node2.SelectSingleNode ("poid").InnerText);
 					a.conditionT.Add (b);
 				}
+				foreach(XmlNode node2 in node.SelectSingleNode ("ressource"))
+				{
+					//a.category = (ActionCategory) Enum.Parse (typeof(ActionCategory), node.SelectSingleNode ("Category").InnerText);
+					ConditionRessource b = new ConditionRessource();
+					b.type = (Ressources) Enum.Parse(typeof(Ressources), node2.SelectSingleNode ("type").InnerText);
+					b.requis = bool.Parse (node2.SelectSingleNode ("requis").InnerText);
+					b.combien = int.Parse (node2.SelectSingleNode ("combien").InnerText);
+					a.conditionR.Add (b);
+				}
 				listEvenement.Add (a);
 					
 			}

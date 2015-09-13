@@ -17,6 +17,7 @@
 		<ressource>
 			<type></type>				<!-- selon l'enum ressources -->
 			<requis></requis>			<!-- OUI/NON -->
+			<combien></combien>
 		</ressource>	
 	</Evenement>
 
