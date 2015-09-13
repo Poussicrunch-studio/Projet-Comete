@@ -29,8 +29,20 @@ namespace AssemblyCSharp
 		}
 
 		public void jouer() {
-
-
+			int poidTotal=0;
+			foreach (TypeDeBatiment b in batimentsDisponibles){
+				poidTotal += b.poids;
+			}
+			System.Random rnd =new System.Random();
+			int test = rnd.Next(0,poidTotal);
+			TypeDeBatiment enCours = new TypeDeBatiment();
+			while(test>0){
+			foreach (TypeDeBatiment b in batimentsDisponibles){
+				test -= b.poids;
+					if (test<=0)
+						break;
+			}
+			}
 		}
 	}
 }

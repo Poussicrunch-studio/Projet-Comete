@@ -10,7 +10,7 @@ namespace AssemblyCSharp
 		public int niveau;
 		public string nom;
 		public UnityEngine.Object prefab;
-		public float poids;
+		public int poids;
 		public List<Effet> effets = new List<Effet> ();
 
 

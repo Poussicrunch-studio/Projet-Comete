@@ -93,6 +93,8 @@ namespace AssemblyCSharp
 						poidTemp = 0; 		// pas de poid négatif
 					destin -= poidTemp;
 					enCours=e;
+					if(destin<=0)
+						break;
 				}
 			}
 			//jouer l'evenement enCours

@@ -85,7 +85,7 @@ namespace AssemblyCSharp
 			XmlNodeList nodes = doc.DocumentElement.ChildNodes;
 			foreach (XmlNode node in nodes) {
 				TypeDeBatiment b = new TypeDeBatiment();
-				b.poids = float.Parse (node.SelectSingleNode ("Poids").InnerText);
+				b.poids = int.Parse (node.SelectSingleNode ("Poids").InnerText);
 				b.niveau = int.Parse (node.SelectSingleNode ("Niveau").InnerText);
 
 				
