@@ -32,6 +32,10 @@ namespace AssemblyCSharp
 			reserves.Remove (Ressources.OXYGENE);
 			reserves.Add (Ressources.OXYGENE,50.0F);
 		}
+
+		public float getQuantiteDeRessource(Ressources r) {
+			return reserves[r];
+		}
 	}
 }
 

@@ -73,9 +73,9 @@ public class SC_GestionPlanete : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("my test");
-
 		gererLaSouris ();
+
+		infoNourriture.text = gestionnaire.colonie.getQuantiteDeRessource (Ressources.NOURRITURE).ToString();
 	}
 
 	public void jouerUnTour() {

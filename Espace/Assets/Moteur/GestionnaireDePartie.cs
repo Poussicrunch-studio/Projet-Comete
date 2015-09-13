@@ -8,9 +8,9 @@ namespace AssemblyCSharp
 	{
 
 		List<Case> cases = new List<Case>(); /*Liste des cases du jeu*/
-		int tour = 0;
-		Joueur joueur;
-		Colonie colonie;
+		public int tour = 0;
+		public Joueur joueur;
+		public Colonie colonie;
 
 		public static int maxXCases = 1000;
 		public static int maxYCases = 1000;
