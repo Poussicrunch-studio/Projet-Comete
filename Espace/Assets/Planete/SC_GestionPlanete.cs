@@ -20,6 +20,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public Case kaseSelectionnee;
 	public Text xDeLaCase;
 	public Text yDeLaCase;
+	public Canvas canvasActions;
 
 	//Ressources et population pour l'IU
 	public Text infoNourriture;
@@ -87,6 +88,14 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public void jouerUnTour() {
 		Debug.Log ("Fin du tour");
 		gestionnaire.jouerUnTour ();
+		canvasActions.enabled = true;
+	
+	}
+
+
+
+	public void jouerSonAction() {
+		canvasActions.enabled = false;
 	}
 
 
