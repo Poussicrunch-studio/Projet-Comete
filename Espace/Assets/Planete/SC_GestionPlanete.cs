@@ -53,6 +53,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		globalPrefabs.LoadAll ("PREFAB");
 		gestionnaire = new GestionnaireDePartie ();
 
 		creerLesCasesInitiales ();
