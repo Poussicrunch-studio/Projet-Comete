@@ -90,7 +90,15 @@ public class SC_GestionPlanete : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		gererLaSouris ();
+		gererLesInfos ();
 
+	}
+
+	private void afficherLesPropositions() {
+	//	if (gestionnaire.colonie.conseillers[CategoriesConseiller.GENERAL]
+	}
+
+	private void gererLesInfos() {
 		infoNourriture.text = "Nourriture : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.NOURRITURE).ToString();
 		infoEau.text = "Eau : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.EAU).ToString();
 		infoOxygene.text = "Oxygène : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.OXYGENE).ToString();
@@ -99,6 +107,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 		infoBiens.text = "Biens : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.BIENS).ToString();
 		infoEnergie.text = "Energie : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.ENERGIE).ToString();
 	}
+
 
 	public void jouerUnTour() {
 		Debug.Log ("Fin du tour");

@@ -6,8 +6,8 @@ namespace AssemblyCSharp
 {
 	public class Colonie
 	{
-		Dictionary<Ressources, float> reserves = new Dictionary<Ressources, float>();
-		List<Conseiller> conseillers = new List<Conseiller>();
+		public Dictionary<Ressources, float> reserves = new Dictionary<Ressources, float>();
+		public Dictionary<CategoriesConseiller,Conseiller> conseillers = new Dictionary<CategoriesConseiller,Conseiller>();
 
 		public Colonie ()
 		{
@@ -27,13 +27,13 @@ namespace AssemblyCSharp
 			foreach (CategoriesConseiller c in Enum.GetValues(typeof(CategoriesConseiller))) {
 				Conseiller conseiller = new Conseiller();
 				conseiller.categorie = c;
-				conseillers.Add(conseiller);
+				conseillers.Add(c,conseiller);
 			}
 		}
 
 		public void jouer() {
-			foreach (Conseiller c in conseillers) {
-				c.jouer();
+			foreach (CategoriesConseiller c in conseillers.Keys) {
+				conseillers[c].jouer();
 			}
 		}
 
