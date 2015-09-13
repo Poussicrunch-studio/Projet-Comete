@@ -66,6 +66,11 @@ public class SC_GestionPlanete : MonoBehaviour {
 		gererLaSouris ();
 	}
 
+	public void jouerUnTour() {
+		Debug.Log ("Fin du tour");
+		gestionnaire.jouerUnTour ();
+	}
+
 
 	public void gererLaSouris() {
 		if (Input.GetMouseButtonDown(0))
