@@ -75,7 +75,13 @@ public class SC_GestionPlanete : MonoBehaviour {
 	void Update () {
 		gererLaSouris ();
 
-//		infoNourriture.text = gestionnaire.colonie.getQuantiteDeRessource ("Nourriture : " + Ressources.NOURRITURE).ToString();
+		infoNourriture.text = "Nourriture : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.NOURRITURE).ToString();
+		infoEau.text = "Eau : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.EAU).ToString();
+		infoOxygene.text = "Oxygène : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.OXYGENE).ToString();
+		infoCredit.text = "Credits : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.CREDITS).ToString();
+		infoMinerai.text = "Minerai : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.MINERAI).ToString();
+		infoBiens.text = "Biens : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.BIENS).ToString();
+		infoEnergie.text = "Energie : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.ENERGIE).ToString();
 	}
 
 	public void jouerUnTour() {
