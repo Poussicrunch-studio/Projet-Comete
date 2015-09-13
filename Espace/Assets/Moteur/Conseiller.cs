@@ -23,6 +23,10 @@ namespace AssemblyCSharp
 
 
 		}
+
+		public void jouer() {
+
+		}
 	}
 }
 

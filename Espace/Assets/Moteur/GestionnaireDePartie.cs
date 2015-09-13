@@ -27,6 +27,7 @@ namespace AssemblyCSharp
 			foreach (Case kase in cases) {
 				kase.jouer();
 			}
+			colonie.jouer ();
 			tour++;
 		}
 

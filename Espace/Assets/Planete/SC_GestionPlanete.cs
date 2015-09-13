@@ -32,6 +32,9 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public Text infoEnergie;
 	public Text infoMinerai;
 
+	//Pour le mode construction
+	public TypeDeBatiment batimentEnCoursDeConstruction = null;
+
 	
 
 	/* Je propose une terminologie pour manipuler les hexagones :

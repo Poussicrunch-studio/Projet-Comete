@@ -32,6 +32,18 @@ namespace AssemblyCSharp
 
 			reserves.Remove (Ressources.OXYGENE);
 			reserves.Add (Ressources.OXYGENE,50.0F);
+
+			foreach (CategoriesConseiller c in Enum.GetValues(typeof(CategoriesConseiller))) {
+				Conseiller conseiller = new Conseiller();
+				conseiller.categorie = c;
+				conseillers.Add(conseiller);
+			}
+		}
+
+		public void jouer() {
+			foreach (Conseiller c in conseillers) {
+				c.jouer();
+			}
 		}
 
 		public float getQuantiteDeRessource(Ressources r) {
