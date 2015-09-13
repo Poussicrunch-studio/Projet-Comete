@@ -13,7 +13,6 @@ namespace AssemblyCSharp
 		{
 			instance = this;
 		}
-		//caca
 	}
 }
 
