@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using AssemblyCSharp;
 
 public class SC_GestionPlanete : MonoBehaviour {
@@ -32,6 +33,16 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public Text infoEnergie;
 	public Text infoMinerai;
 
+	//Pour le canvas des conseillers
+	Dictionary<CategoriesConseiller, TypeDeBatiment> batimentsProposes = new Dictionary<CategoriesConseiller, TypeDeBatiment>();
+	public Button bGeneral;
+	public Button bMinistre;
+	public Button bExplorateur;
+	public Button bScientifique;
+	public Button bGouverneur;
+
+	
+	
 	//Pour le mode construction
 	public TypeDeBatiment batimentEnCoursDeConstruction = null;
 
