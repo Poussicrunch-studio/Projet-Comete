@@ -48,8 +48,9 @@ namespace AssemblyCSharp
 				a.choix3 = node.SelectSingleNode ("choix3").InnerText;
 				foreach(XmlNode node2 in node.SelectSingleNode ("terrain"))
 				{
+					//a.category = (ActionCategory) Enum.Parse (typeof(ActionCategory), node.SelectSingleNode ("Category").InnerText);
 					ConditionTerrain b = new ConditionTerrain();
-					b.type = Terrains.Parse(node2.SelectSingleNode ("type").InnerText);
+					b.type = (Terrains) Enum.Parse(typeof(Terrains), node2.SelectSingleNode ("type").InnerText);
 					b.requis = bool.Parse (node2.SelectSingleNode ("requis").InnerText);
 					b.poid = int.Parse (node2.SelectSingleNode ("poid").InnerText);
 					a.conditionT.Add (b);
