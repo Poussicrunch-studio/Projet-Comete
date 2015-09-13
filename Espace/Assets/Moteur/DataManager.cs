@@ -18,6 +18,7 @@ namespace AssemblyCSharp
 
 		/*----Data----*/
 		public List<TypeDeBatiment> typesDeBatiment = new List<TypeDeBatiment>();
+		public List<Evenement> listEvenement = new List<Evenement>();
 		/*------------*/
 
 		public DataManager ()
@@ -33,7 +34,13 @@ namespace AssemblyCSharp
 			Debug.Log ("Démarrage du chargement des données de jeu...");
 			Debug.Log (Application.dataPath + "/Data");
 			XmlDocument doc = new XmlDocument ();
-			doc.Load (dataPath + "/Batiments.xml");
+			//doc.Load (dataPath + "/Batiments.xml");
+			doc.Load (dataPath + "/evenements.xml");
+			XmlNodeList nodes = doc.DocumentElement.ChildNodes;
+			foreach (XmlNode node in nodes) 
+			{
+				Evenement a = new Evenement();
+			}
 
 			
 			Debug.Log ("Fin du chargement des données de jeu...");

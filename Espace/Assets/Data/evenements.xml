@@ -2,7 +2,7 @@
 
 <Evenements>
 	<Evenement>
-		<Name></Name>
+		<Nom></Nom>
 		<description></description>
 		<important></important>			<!-- OUI/NON (popage au milieu de l'écran) -->
 		<choix></choix>					<!-- OUI/NON -->
