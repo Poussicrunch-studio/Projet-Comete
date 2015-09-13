@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Batiments>
+
+	<Batiment>
+		<Name>Forage</Name>
+		<Effet>
+			<Type>Produire</Type>
+			<Ressource>Eau</Ressource>
+			<Quantite>10</Quantite>
+		</Effet>
+	</Batiment>
+
+	<Batiment>
+		<Name>Complexe d'habitation</Name>
+		<Effet>
+			<Type>habitation</Type>
+			<Quantite>20</Quantite>
+		</Effet>
+	</Batiment>
+
+</Batiments>
