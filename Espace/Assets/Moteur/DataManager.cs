@@ -50,6 +50,7 @@ namespace AssemblyCSharp
 				a.choix1 = node.SelectSingleNode ("choix1").InnerText;
 				a.choix2 = node.SelectSingleNode ("choix2").InnerText;
 				a.choix3 = node.SelectSingleNode ("choix3").InnerText;
+				a.entropie = int.Parse (node.SelectSingleNode ("entropie").InnerText);
 				XmlNodeList nodes2 = node.SelectNodes("terrain");
 				foreach(XmlNode node2 in nodes2)
 				{
@@ -86,7 +87,6 @@ namespace AssemblyCSharp
 				TypeDeBatiment b = new TypeDeBatiment();
 				b.poids = float.Parse (node.SelectSingleNode ("Poids").InnerText);
 				b.niveau = int.Parse (node.SelectSingleNode ("Niveau").InnerText);
-				b.prefab = globalPrefabs.getPrefab(node.SelectSingleNode ("Prefab").InnerText);
 
 				
 				typesDeBatiment.Add(b);

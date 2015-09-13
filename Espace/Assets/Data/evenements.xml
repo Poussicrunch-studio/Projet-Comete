@@ -18,7 +18,8 @@
 			<type>MINERAI</type>				<!-- selon l'enum ressources -->
 			<requis>False</requis>			<!-- OUI/NON -->
 			<combien>4</combien>
-		</ressource>	
+		</ressource>
+		<entropie>10</entropie>	
 	</Evenement>
 
 

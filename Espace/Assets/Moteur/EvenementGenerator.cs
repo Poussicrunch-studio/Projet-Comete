@@ -97,6 +97,7 @@ namespace AssemblyCSharp
 			}
 			//jouer l'evenement enCours
 			Debug.Log (enCours.nom +"\n"+ enCours.description);
+			entropie -= enCours.entropie;
 	}
 }
 }

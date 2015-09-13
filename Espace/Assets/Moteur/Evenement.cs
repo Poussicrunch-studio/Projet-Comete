@@ -22,7 +22,7 @@ namespace AssemblyCSharp
 		public string choix3;
 		public List<ConditionTerrain> conditionT = new List<ConditionTerrain>();
 		public List<ConditionRessource> conditionR = new List<ConditionRessource>();
-
+		public int entropie;
 		public Evenement ()
 		{
 
