@@ -86,6 +86,7 @@ namespace AssemblyCSharp
 				TypeDeBatiment b = new TypeDeBatiment();
 				b.poids = float.Parse (node.SelectSingleNode ("Poids").InnerText);
 				b.niveau = int.Parse (node.SelectSingleNode ("Niveau").InnerText);
+				b.prefab = globalPrefabs.getPrefab(node.SelectSingleNode ("Prefab").InnerText);
 
 				
 				typesDeBatiment.Add(b);

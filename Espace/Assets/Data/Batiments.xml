@@ -7,6 +7,7 @@
 		<Categorie>MINISTRE</Categorie>
 		<Niveau>0</Niveau>
 		<Poids>200</Poids>
+		<Prefab>BatimentMoche</Prefab>
 		<Effet>
 			<Type>Produire</Type>
 			<Ressource>Eau</Ressource>
@@ -19,6 +20,7 @@
 		<Categorie>GOUVERNEUR</Categorie>
 		<Niveau>0</Niveau>
 		<Poids>175</Poids>
+		<Prefab>BatimentMoche</Prefab>
 		<Effet>
 			<Type>Population</Type>
 			<Quantite>20</Quantite>
