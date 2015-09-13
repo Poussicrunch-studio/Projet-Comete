@@ -46,12 +46,12 @@ namespace AssemblyCSharp
 				a.choix1 = node.SelectSingleNode ("choix1").InnerText;
 				a.choix2 = node.SelectSingleNode ("choix2").InnerText;
 				a.choix3 = node.SelectSingleNode ("choix3").InnerText;
-				foreach(XmlNode node in node.SelectSingleNode ("terrain"))
+				foreach(XmlNode node2 in node.SelectSingleNode ("terrain"))
 				{
 					ConditionTerrain b = new ConditionTerrain();
-					b.type = Terrains.Parse(node.SelectSingleNode ("type").InnerText);
-					b.requis = bool.Parse (node.SelectSingleNode ("requis").InnerText);
-					b.poid = int.Parse (node.SelectSingleNode ("poid").InnerText);
+					b.type = Terrains.Parse(node2.SelectSingleNode ("type").InnerText);
+					b.requis = bool.Parse (node2.SelectSingleNode ("requis").InnerText);
+					b.poid = int.Parse (node2.SelectSingleNode ("poid").InnerText);
 					a.conditionT.Add (b);
 				}
 				listEvenement.Add (a);
