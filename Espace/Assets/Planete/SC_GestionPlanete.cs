@@ -75,7 +75,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 	void Update () {
 		gererLaSouris ();
 
-		infoNourriture.text = gestionnaire.colonie.getQuantiteDeRessource (Ressources.NOURRITURE).ToString();
+		infoNourriture.text = gestionnaire.colonie.getQuantiteDeRessource ("Nourriture : " + Ressources.NOURRITURE).ToString();
 	}
 
 	public void jouerUnTour() {
