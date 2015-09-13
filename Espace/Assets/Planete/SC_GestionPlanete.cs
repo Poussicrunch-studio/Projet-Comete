@@ -21,6 +21,18 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public Text xDeLaCase;
 	public Text yDeLaCase;
 
+	//Ressources et population pour l'IU
+	public Text infoNourriture;
+	public Text infoOxygene;
+	public Text infoEau;
+	public Text infoPopulation;
+	public Text infoCredit;
+	public Text infoBiens;
+	public Text infoEnergie;
+	public Text infoMinerai;
+
+	
+
 	/* Je propose une terminologie pour manipuler les hexagones :
 	 * l'hexagone++ d'un hexagone donné est celui positionné en haut à droite (+x+y)
 	 * Le += juste à droite (+x=y), et ainsi de suite.
