@@ -9,6 +9,7 @@ namespace AssemblyCSharp
 	{
 		int entropie; 							//pourcentage de chance de popage d'un event
 		int poidTotal;
+		int poidTemp;
 		public EvenementGenerator instance;
 
 		public EvenementGenerator ()
@@ -21,14 +22,41 @@ namespace AssemblyCSharp
 			entropie = 60; 						//modifiable
 		}
 
-		public void testEvent()
+		public void testEvent(Case laCase)
 		{
 			poidTotal=0;
+			poidTemp=0;
 			System.Random rnd = new System.Random();
 			int test = rnd.Next(0, 100);
 			if(entropie >= test)				//si oui alors faire tout les test de poids d'event sur la case et en tirer un au hasard
 			{
-			
+			foreach(Evenement e in DataManager.dataManager.listEvenement)
+			{
+				foreach(ConditionTerrain t in e.conditionT)
+					{
+					if(t.requis == true)
+					{
+						if(t.type == laCase.terrain)
+						{
+							poidTemp += t.poid;
+						}
+						else
+						{
+							poidTemp=0; 		//le terrain est requis et ce n'est pas le meme
+							break;
+						}
+					}
+					else
+					{
+						if(t.type == laCase.terrain)
+						{
+							poidTemp += t.poid;
+						}
+					}
+			}
+				}
+				if(poidTemp<0)
+					poidTemp = 0; 				// pas de poid négatif
 			}
 		}
 	}
