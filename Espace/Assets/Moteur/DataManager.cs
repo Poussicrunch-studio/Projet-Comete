@@ -43,9 +43,9 @@ namespace AssemblyCSharp
 				a.nom = node.SelectSingleNode ("Nom").InnerText;
 				a.description = node.SelectSingleNode ("description").InnerText;
 				a.choix = bool.Parse(node.SelectSingleNode ("choix").InnerText);
-				a.choix = node.SelectSingleNode ("choix1").InnerText;
-				a.choix = node.SelectSingleNode ("choix2").InnerText;
-				a.choix = node.SelectSingleNode ("choix3").InnerText;
+				a.choix1 = node.SelectSingleNode ("choix1").InnerText;
+				a.choix2 = node.SelectSingleNode ("choix2").InnerText;
+				a.choix3 = node.SelectSingleNode ("choix3").InnerText;
 				foreach(XmlNode node in node.SelectSingleNode ("terrain"))
 				{
 					ConditionTerrain b = new ConditionTerrain();
@@ -54,6 +54,7 @@ namespace AssemblyCSharp
 					b.poid = int.Parse (node.SelectSingleNode ("poid").InnerText);
 					a.conditionT.Add (b);
 				}
+				listEvenement.Add (a);
 					
 			}
 
