@@ -50,7 +50,8 @@ namespace AssemblyCSharp
 				a.choix1 = node.SelectSingleNode ("choix1").InnerText;
 				a.choix2 = node.SelectSingleNode ("choix2").InnerText;
 				a.choix3 = node.SelectSingleNode ("choix3").InnerText;
-				foreach(XmlNode node2 in node.SelectSingleNode ("terrain"))
+				XmlNodeList nodes2 = node.SelectNodes("terrain");
+				foreach(XmlNode node2 in nodes2)
 				{
 					//a.category = (ActionCategory) Enum.Parse (typeof(ActionCategory), node.SelectSingleNode ("Category").InnerText);
 					ConditionTerrain b = new ConditionTerrain();
@@ -59,7 +60,8 @@ namespace AssemblyCSharp
 					b.poid = int.Parse (node2.SelectSingleNode ("poid").InnerText);
 					a.conditionT.Add (b);
 				}
-				foreach(XmlNode node2 in node.SelectSingleNode ("ressource"))
+				nodes2 = node.SelectNodes("ressource");
+				foreach(XmlNode node2 in nodes2)
 				{
 					//a.category = (ActionCategory) Enum.Parse (typeof(ActionCategory), node.SelectSingleNode ("Category").InnerText);
 					ConditionRessource b = new ConditionRessource();
@@ -82,7 +84,10 @@ namespace AssemblyCSharp
 			XmlNodeList nodes = doc.DocumentElement.ChildNodes;
 			foreach (XmlNode node in nodes) {
 				TypeDeBatiment b = new TypeDeBatiment();
+				b.poids = float.Parse (node.SelectSingleNode ("Poids").InnerText);
+				b.niveau = int.Parse (node.SelectSingleNode ("Niveau").InnerText);
 
+				
 				typesDeBatiment.Add(b);
 			}
 

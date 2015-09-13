@@ -20,8 +20,8 @@ namespace AssemblyCSharp
 		public string choix1;
 		public string choix2;
 		public string choix3;
-		public List<ConditionTerrain> conditionT;
-		public List<ConditionRessource> conditionR;
+		public List<ConditionTerrain> conditionT = new List<ConditionTerrain>();
+		public List<ConditionRessource> conditionR = new List<ConditionRessource>();
 
 		public Evenement ()
 		{

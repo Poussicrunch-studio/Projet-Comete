@@ -2,22 +2,22 @@
 
 <Evenements>
 	<Evenement>
-		<Nom></Nom>
-		<description></description>
-		<important></important>			<!-- OUI/NON (popage au milieu de l'écran) -->
-		<choix></choix>					<!-- OUI/NON -->
-		<choix1></choix1>
-		<choix2></choix2>
-		<choix3></choix3>
+		<Nom>sdhfdh</Nom>
+		<description>dghgdfh</description>
+		<important>True</important>			<!-- OUI/NON (popage au milieu de l'écran) -->
+		<choix>True</choix>					<!-- OUI/NON -->
+		<choix1>dsq</choix1>
+		<choix2>sfg</choix2>
+		<choix3>sfgsf</choix3>
 		<terrain>
-			<type></type>
-			<requis></requis> 			<!-- OUI/NON -->
-			<poid></poid>				<!-- importance de ce facteur dans l'apparition de cet event (positif ou negatif)-->
+			<type>PRAIRIE</type>
+			<requis>True</requis> 			<!-- OUI/NON -->
+			<poid>8</poid>				<!-- importance de ce facteur dans l'apparition de cet event (positif ou negatif)-->
 		</terrain>
 		<ressource>
-			<type></type>				<!-- selon l'enum ressources -->
-			<requis></requis>			<!-- OUI/NON -->
-			<combien></combien>
+			<type>MINERAI</type>				<!-- selon l'enum ressources -->
+			<requis>False</requis>			<!-- OUI/NON -->
+			<combien>4</combien>
 		</ressource>	
 	</Evenement>
 

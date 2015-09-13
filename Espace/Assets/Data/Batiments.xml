@@ -6,6 +6,7 @@
 		<Name>Forage</Name>
 		<Categorie>MINISTRE</Categorie>
 		<Niveau>0</Niveau>
+		<Poids>200</Poids>
 		<Effet>
 			<Type>Produire</Type>
 			<Ressource>Eau</Ressource>
@@ -17,6 +18,7 @@
 		<Name>Complexe d'habitation</Name>
 		<Categorie>GOUVERNEUR</Categorie>
 		<Niveau>0</Niveau>
+		<Poids>175</Poids>
 		<Effet>
 			<Type>Population</Type>
 			<Quantite>20</Quantite>

@@ -18,6 +18,7 @@ namespace AssemblyCSharp
 
 		public GestionnaireDePartie ()
 		{
+			DataManager dm = new DataManager ();
 			joueur = new Joueur ();
 			colonie = new Colonie ();
 		}
