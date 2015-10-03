@@ -15,6 +15,15 @@ namespace AssemblyCSharp
 			this.kase = kase;
 		}
 
+		public Batiment (TypeDeBatiment type)
+		{
+			this.type = type;
+		}
+
+		public String getNom() {
+			return type.nom;
+		}
+
 		/*Un bâtiment contient une liste d'effets.
 		 * Lorsqu'on lui demande de jouer, il applique tous ses effets les
 		 * uns après les autres. L'effet n'est pas propre au bâtiment, il 

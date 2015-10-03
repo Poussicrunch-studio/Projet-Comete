@@ -87,6 +87,7 @@ namespace AssemblyCSharp
 				TypeDeBatiment b = new TypeDeBatiment();
 				b.poids = int.Parse (node.SelectSingleNode ("Poids").InnerText);
 				b.niveau = int.Parse (node.SelectSingleNode ("Niveau").InnerText);
+				b.nom = node.SelectSingleNode ("Nom").InnerText;
 				b.categorie = (CategoriesConseiller) Enum.Parse (typeof(CategoriesConseiller), node.SelectSingleNode ("Categorie").InnerText);
 
 				

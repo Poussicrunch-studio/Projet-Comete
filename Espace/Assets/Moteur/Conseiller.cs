@@ -14,7 +14,7 @@ namespace AssemblyCSharp
 
 		public CategoriesConseiller categorie;
 		public List<TypeDeBatiment> batimentsDisponibles = new List<TypeDeBatiment>();
-		public TypeDeBatiment proposition;
+		public Batiment proposition;
 
 		public Conseiller (CategoriesConseiller categorie)
 		{
@@ -46,9 +46,9 @@ namespace AssemblyCSharp
 			foreach (TypeDeBatiment b in batimentsDisponibles){
 				test -= b.poids;
 					if (test<=0) {
-						proposition = b;
+						proposition = new Batiment(b);
 						if (proposition != null) {
-							Debug.Log ("Conseiller a choisi : " + proposition.nom + " parmis " + batimentsDisponibles.Count);
+							Debug.Log ("Conseiller a choisi : " + proposition.getNom() + " parmis " + batimentsDisponibles.Count);
 						}
 						else {
 							Debug.Log ("Conseiller n'a pas trouvé de batiment");

@@ -3,7 +3,7 @@
 <Batiments>
 
 	<Batiment>
-		<Name>Forage</Name>
+		<Nom>Forage</Nom>
 		<Categorie>MINISTRE</Categorie>
 		<Niveau>0</Niveau>
 		<Poids>200</Poids>
@@ -16,7 +16,7 @@
 	</Batiment>
 
 	<Batiment>
-		<Name>Complexe d'habitation</Name>
+		<Nom>Complexe d'habitation</Nom>
 		<Categorie>GOUVERNEUR</Categorie>
 		<Niveau>0</Niveau>
 		<Poids>175</Poids>

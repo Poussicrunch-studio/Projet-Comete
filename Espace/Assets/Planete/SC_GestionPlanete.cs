@@ -114,9 +114,9 @@ public class SC_GestionPlanete : MonoBehaviour {
 		selectionnerUneProposition (CategoriesConseiller.EXPLORATEUR);
 	}
 	public void selectionnerUneProposition(CategoriesConseiller c) {
-		TypeDeBatiment proposition = gestionnaire.colonie.conseillers[c].proposition;
+		Batiment proposition = gestionnaire.colonie.conseillers[c].proposition;
 		if (proposition != null) {
-			Debug.Log("Proposition : " + proposition.ToString());
+			Debug.Log("Proposition : " + proposition.getNom());
 		} else {
 			Debug.Log("Pas de proposition");
 		}
