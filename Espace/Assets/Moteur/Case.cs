@@ -47,7 +47,9 @@ namespace AssemblyCSharp
 			GameObject go = (GameObject) MonoBehaviour.Instantiate(b.type.prefab, 
 			                                                       new Vector3(coordX * SC_GestionPlanete.longueurXTuile, coordY * SC_GestionPlanete.longueurYTuile, 0.0f),
 			                          Quaternion.identity);
-			go.transform.Rotate(new Vector3(1,0,0) * 180, Space.World);
+			SC_DataForPrefab script = go.GetComponent<SC_DataForPrefab>();
+
+			go.transform.Rotate(new Vector3(1,0,0) * script.rotationX, Space.World);
 			//t.parent = tuile;
 		}
 	}
