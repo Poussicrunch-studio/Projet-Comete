@@ -12,8 +12,8 @@ public class SC_GestionPlanete : MonoBehaviour {
 	static public float rotationYTuile = 0.0f;
 	static public float rotationZTuile = 0.0f;
 
-	static public float longueurXTuile = 10.5f;
-	static public float longueurYTuile = 15.0f;
+	static public float longueurXTuile = 0.0f;
+	static public float longueurYTuile = 0.0f;
 
 	public GestionnaireDePartie gestionnaire; /*Le gestionnaire s'occupe de gerer tout le jeu "interne", pas les graphismes*/
 
@@ -69,6 +69,9 @@ public class SC_GestionPlanete : MonoBehaviour {
 	void Start () {
 		globalPrefabs.LoadAll ("PREFAB");
 		gestionnaire = new GestionnaireDePartie ();
+
+		longueurXTuile = modeleTuile.GetComponent<Renderer>().bounds.size.x;
+		longueurYTuile = modeleTuile.GetComponent<Renderer>().bounds.size.z;
 
 		creerLesCasesInitiales ();
 	}
@@ -188,7 +191,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 		}
 
 
-		Transform t = Instantiate(modeleTuile, new Vector3(x * longueurXTuile, y * longueurYTuile + yModifie, 0.0f), Quaternion.identity) as Transform;
+		Transform t = Instantiate(modeleTuile, new Vector3(x * longueurXTuile * (3.0f/4.0f), y * longueurYTuile + yModifie, 0.0f), Quaternion.identity) as Transform;
 		Case kase = new Case (t.gameObject,x,y);
 		gestionnaire.ajouterUneCase (kase);
 		SC_Case script = t.gameObject.GetComponent<SC_Case>();

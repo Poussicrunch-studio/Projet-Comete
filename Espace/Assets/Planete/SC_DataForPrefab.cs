@@ -10,5 +10,7 @@ public class SC_DataForPrefab : MonoBehaviour {
 
 	public float rotationX = 0;
 	public float decalageEnX = 0;
+	public float decalageEnY = 0;
+	public float decalageEnZ = 0;
 
 }

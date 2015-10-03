@@ -50,6 +50,7 @@ namespace AssemblyCSharp
 			SC_DataForPrefab script = go.GetComponent<SC_DataForPrefab>();
 
 			go.transform.Rotate(new Vector3(1,0,0) * script.rotationX, Space.World);
+			go.transform.Translate (new Vector3(script.decalageEnX,script.decalageEnY,script.decalageEnZ));
 			//t.parent = tuile;
 		}
 	}
