@@ -20,7 +20,7 @@
 		<Categorie>GOUVERNEUR</Categorie>
 		<Niveau>0</Niveau>
 		<Poids>175</Poids>
-		<Prefab>BatimentMoche</Prefab>
+		<Prefab>Habitations</Prefab>
 		<Effet>
 			<Type>POPULATION</Type>
 			<Quantite>20</Quantite>

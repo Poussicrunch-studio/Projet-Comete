@@ -8,12 +8,12 @@ public class SC_GestionPlanete : MonoBehaviour {
 
 	public Transform modeleTuile;
 
-	public float rotationXTuile = 0.0f;
-	public float rotationYTuile = 0.0f;
-	public float rotationZTuile = 0.0f;
+	static public float rotationXTuile = 0.0f;
+	static public float rotationYTuile = 0.0f;
+	static public float rotationZTuile = 0.0f;
 
-	public float longueurXTuile = 0.7f;
-	public float longueurYTuile = 1.0f;
+	static public float longueurXTuile = 10.5f;
+	static public float longueurYTuile = 15.0f;
 
 	public GestionnaireDePartie gestionnaire; /*Le gestionnaire s'occupe de gerer tout le jeu "interne", pas les graphismes*/
 
@@ -44,7 +44,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 	
 	
 	//Pour le mode construction
-	public TypeDeBatiment batimentEnCoursDeConstruction = null;
+	public Batiment batimentEnCoursDeConstruction = null;
 
 	
 
@@ -117,6 +117,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 		Batiment proposition = gestionnaire.colonie.conseillers[c].proposition;
 		if (proposition != null) {
 			Debug.Log("Proposition : " + proposition.getNom());
+			batimentEnCoursDeConstruction = proposition;
 		} else {
 			Debug.Log("Pas de proposition");
 		}
@@ -165,11 +166,18 @@ public class SC_GestionPlanete : MonoBehaviour {
 					kaseSelectionnee = hitInfo.transform.gameObject.GetComponent<SC_Case>().kase;
 					xDeLaCase.text = kaseSelectionnee.coordX.ToString();
 					yDeLaCase.text = kaseSelectionnee.coordY.ToString();
+					if (batimentEnCoursDeConstruction != null && !kaseSelectionnee.possedeUnBatiment()) {
+						construire (kaseSelectionnee);
+					}
 				}
 			}
 		} 
 	}
 
+	public void construire(Case kase) {
+		kase.construire (batimentEnCoursDeConstruction);
+		batimentEnCoursDeConstruction = null;
+	}
 
 	public void instancierUnHexagone(int x, int y) {
 

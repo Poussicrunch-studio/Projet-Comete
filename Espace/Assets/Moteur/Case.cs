@@ -2,6 +2,8 @@ using System;
 using UnityEngine;
 using AssemblyCSharp;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using System.Collections;
 
 namespace AssemblyCSharp
 {
@@ -38,6 +40,15 @@ namespace AssemblyCSharp
 
 		public bool estImpaire() {
 			return coordX%2==1;
+		}
+
+		public void construire(Batiment b) {
+			batiment = b;
+			GameObject go = (GameObject) MonoBehaviour.Instantiate(b.type.prefab, 
+			                                                       new Vector3(coordX * SC_GestionPlanete.longueurXTuile, coordY * SC_GestionPlanete.longueurYTuile, 0.0f),
+			                          Quaternion.identity);
+			go.transform.Rotate(new Vector3(1,0,0) * 180, Space.World);
+			//t.parent = tuile;
 		}
 	}
 }

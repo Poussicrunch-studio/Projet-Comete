@@ -89,7 +89,7 @@ namespace AssemblyCSharp
 				b.niveau = int.Parse (node.SelectSingleNode ("Niveau").InnerText);
 				b.nom = node.SelectSingleNode ("Nom").InnerText;
 				b.categorie = (CategoriesConseiller) Enum.Parse (typeof(CategoriesConseiller), node.SelectSingleNode ("Categorie").InnerText);
-
+				b.prefab = globalPrefabs.getPrefab(node.SelectSingleNode("Prefab").InnerText);
 				
 				typesDeBatiment.Add(b);
 			}

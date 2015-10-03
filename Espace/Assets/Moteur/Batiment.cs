@@ -6,8 +6,8 @@ namespace AssemblyCSharp
 {
 	public class Batiment
 	{
-		TypeDeBatiment type;
-		Case kase;
+		public TypeDeBatiment type;
+		public Case kase;
 
 		public Batiment (TypeDeBatiment type, Case kase)
 		{
