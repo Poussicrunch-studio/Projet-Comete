@@ -94,12 +94,32 @@ public class SC_GestionPlanete : MonoBehaviour {
 
 	}
 
-	public void selectionnerPropositionMinistre() {
+	public void selectionnerPropositionMINISTRE() {
 		selectionnerUneProposition (CategoriesConseiller.MINISTRE);
 	}
 
-	public void selectionnerUneProposition(CategoriesConseiller conseiller) {
+	public void selectionnerPropositionGENERAL() {
+		selectionnerUneProposition (CategoriesConseiller.GENERAL);
+	}
 
+	public void selectionnerPropositionGOUVERNEUR() {
+		selectionnerUneProposition (CategoriesConseiller.GOUVERNEUR);
+	}
+
+	public void selectionnerPropositionSCIENTIFIQUE() {
+		selectionnerUneProposition (CategoriesConseiller.SCIENTIFIQUE);
+	}
+
+	public void selectionnerPropositionEXPLORATEUR() {
+		selectionnerUneProposition (CategoriesConseiller.EXPLORATEUR);
+	}
+	public void selectionnerUneProposition(CategoriesConseiller c) {
+		TypeDeBatiment proposition = gestionnaire.colonie.conseillers[c].proposition;
+		if (proposition != null) {
+			Debug.Log("Proposition : " + proposition.ToString());
+		} else {
+			Debug.Log("Pas de proposition");
+		}
 	}
 
 	private void afficherLesPropositions() {

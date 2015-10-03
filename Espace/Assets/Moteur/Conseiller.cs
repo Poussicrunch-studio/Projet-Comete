@@ -11,6 +11,7 @@ namespace AssemblyCSharp
 		public int fiabilité = 0;
 		public int education = 0;
 		public int inventivité = 0;
+
 		public CategoriesConseiller categorie;
 		public List<TypeDeBatiment> batimentsDisponibles = new List<TypeDeBatiment>();
 		public TypeDeBatiment proposition;
@@ -33,6 +34,7 @@ namespace AssemblyCSharp
 		}
 
 		public void jouer() {
+			proposition = null;
 			int poidTotal=0;
 			foreach (TypeDeBatiment b in batimentsDisponibles){
 				poidTotal += b.poids;
