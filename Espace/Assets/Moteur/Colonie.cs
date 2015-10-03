@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using AssemblyCSharp;
+using UnityEngine;
 
 namespace AssemblyCSharp
 {
@@ -11,6 +12,8 @@ namespace AssemblyCSharp
 
 		public Colonie ()
 		{
+			Debug.Log ("Creation de la colonie");
+
 			foreach (Ressources ressource in Enum.GetValues(typeof(Ressources))) {
 				reserves.Add(ressource,0.0f);
 				}
@@ -24,9 +27,10 @@ namespace AssemblyCSharp
 			reserves.Remove (Ressources.OXYGENE);
 			reserves.Add (Ressources.OXYGENE,50.0F);
 
+		//	for (int i = 0 ; i < Enum.GetValues(typeof(CategoriesConseiller).Le
 			foreach (CategoriesConseiller c in Enum.GetValues(typeof(CategoriesConseiller))) {
-				Conseiller conseiller = new Conseiller();
-				conseiller.categorie = c;
+				Conseiller conseiller = new Conseiller(c);
+				Debug.Log(c);
 				conseillers.Add(c,conseiller);
 			}
 		}

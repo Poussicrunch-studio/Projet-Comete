@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using AssemblyCSharp;
 using System;
+using UnityEngine;
 
 namespace AssemblyCSharp
 {
@@ -12,20 +13,23 @@ namespace AssemblyCSharp
 		public int inventivité = 0;
 		public CategoriesConseiller categorie;
 		public List<TypeDeBatiment> batimentsDisponibles = new List<TypeDeBatiment>();
+		public TypeDeBatiment proposition;
 
-		public Conseiller ()
+		public Conseiller (CategoriesConseiller categorie)
 		{
+			this.categorie = categorie;
 			genererLesListesDeBatimentsDisponibles ();
-
 		}
 
 
 		private void genererLesListesDeBatimentsDisponibles() { //Un nom aussi long c'est mal
 			foreach (TypeDeBatiment b in DataManager.dataManager.typesDeBatiment) {
+				Debug.Log(b.categorie + " " + categorie);
 				if (b.categorie == categorie) {
 					batimentsDisponibles.Add(b);
 				}
 			}
+			Debug.Log("Nombre de batiment pour ce conseiller : " + batimentsDisponibles.Count);
 		}
 
 		public void jouer() {
@@ -39,8 +43,16 @@ namespace AssemblyCSharp
 			while(test>0){
 			foreach (TypeDeBatiment b in batimentsDisponibles){
 				test -= b.poids;
-					if (test<=0)
+					if (test<=0) {
+						proposition = b;
+						if (proposition != null) {
+							Debug.Log ("Conseiller a choisi : " + proposition.nom + " parmis " + batimentsDisponibles.Count);
+						}
+						else {
+							Debug.Log ("Conseiller n'a pas trouvé de batiment");
+						}
 						break;
+					}
 			}
 			}
 		}

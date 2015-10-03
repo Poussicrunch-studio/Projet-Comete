@@ -94,6 +94,14 @@ public class SC_GestionPlanete : MonoBehaviour {
 
 	}
 
+	public void selectionnerPropositionMinistre() {
+		selectionnerUneProposition (CategoriesConseiller.MINISTRE);
+	}
+
+	public void selectionnerUneProposition(CategoriesConseiller conseiller) {
+
+	}
+
 	private void afficherLesPropositions() {
 	//	if (gestionnaire.colonie.conseillers[CategoriesConseiller.GENERAL]
 	}
