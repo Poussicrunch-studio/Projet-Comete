@@ -191,13 +191,25 @@ public class SC_GestionPlanete : MonoBehaviour {
 		}
 
 
-		Transform t = Instantiate(modeleTuile, new Vector3(x * longueurXTuile * (3.0f/4.0f), y * longueurYTuile + yModifie, 0.0f), Quaternion.identity) as Transform;
+		Transform t = Instantiate(modeleTuile, new Vector3(getXofHexagone(x,y), getYofHexagone(x,y), 0.0f), Quaternion.identity) as Transform;
 		Case kase = new Case (t.gameObject,x,y);
 		gestionnaire.ajouterUneCase (kase);
 		SC_Case script = t.gameObject.GetComponent<SC_Case>();
 		script.kase = kase;
 	}
-	
+
+	static public float getXofHexagone(int x, int y) {
+		return x * longueurXTuile * (3.0f / 4.0f);
+	}
+
+	static public float getYofHexagone(int x, int y) {
+		float yModifie = 0.0f;
+		if (x % 2 != 0) {
+			yModifie = 0.5f * longueurYTuile;
+		}
+		return y * longueurYTuile + yModifie;
+	}
+
 	public void instancierUnHexagone (int position, Case caseInitiale ) {
 		int decalX, decalY;
 

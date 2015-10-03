@@ -45,7 +45,7 @@ namespace AssemblyCSharp
 		public void construire(Batiment b) {
 			batiment = b;
 			GameObject go = (GameObject) MonoBehaviour.Instantiate(b.type.prefab, 
-			                                                       new Vector3(coordX * SC_GestionPlanete.longueurXTuile, coordY * SC_GestionPlanete.longueurYTuile, 0.0f),
+			                                                       new Vector3(SC_GestionPlanete.getXofHexagone(coordX,coordY), SC_GestionPlanete.getYofHexagone(coordX,coordY), 0.0f),
 			                          Quaternion.identity);
 			SC_DataForPrefab script = go.GetComponent<SC_DataForPrefab>();
 
