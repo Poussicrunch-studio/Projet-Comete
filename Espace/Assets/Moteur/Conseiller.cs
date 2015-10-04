@@ -25,7 +25,6 @@ namespace AssemblyCSharp
 
 		private void genererLesListesDeBatimentsDisponibles() { //Un nom aussi long c'est mal
 			foreach (TypeDeBatiment b in DataManager.dataManager.typesDeBatiment) {
-				Debug.Log(b.categorie + " " + categorie);
 				if (b.categorie == categorie) {
 					batimentsDisponibles.Add(b);
 				}

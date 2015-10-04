@@ -30,7 +30,6 @@ namespace AssemblyCSharp
 		//	for (int i = 0 ; i < Enum.GetValues(typeof(CategoriesConseiller).Le
 			foreach (CategoriesConseiller c in Enum.GetValues(typeof(CategoriesConseiller))) {
 				Conseiller conseiller = new Conseiller(c);
-				Debug.Log(c);
 				conseillers.Add(c,conseiller);
 			}
 		}

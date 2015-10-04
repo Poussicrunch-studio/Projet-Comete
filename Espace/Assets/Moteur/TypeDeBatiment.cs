@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using AssemblyCSharp;
 
 namespace AssemblyCSharp
 {
@@ -16,6 +17,10 @@ namespace AssemblyCSharp
 
 		public TypeDeBatiment ()
 		{
+		}
+
+		public void ajouterEffet(Effet effet) {
+			effets.Add (effet);
 		}
 	}
 }

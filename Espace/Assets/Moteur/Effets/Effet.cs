@@ -3,7 +3,6 @@ namespace AssemblyCSharp
 {
 	public class Effet
 	{
-		public float quantite;
 
 		public Effet ()
 		{

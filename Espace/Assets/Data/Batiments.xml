@@ -10,7 +10,7 @@
 		<Prefab>BatimentMoche</Prefab>
 		<Effet>
 			<Type>PRODUIRE</Type>
-			<Ressource>Eau</Ressource>
+			<Ressource>EAU</Ressource>
 			<Quantite>10</Quantite>
 		</Effet>
 	</Batiment>

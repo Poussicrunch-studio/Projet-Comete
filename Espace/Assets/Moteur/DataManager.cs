@@ -90,10 +90,32 @@ namespace AssemblyCSharp
 				b.nom = node.SelectSingleNode ("Nom").InnerText;
 				b.categorie = (CategoriesConseiller) Enum.Parse (typeof(CategoriesConseiller), node.SelectSingleNode ("Categorie").InnerText);
 				b.prefab = globalPrefabs.getPrefab(node.SelectSingleNode("Prefab").InnerText);
-				
+
+				//Chargement des effets
+				XmlNodeList nodesEffet = node.SelectNodes("Effet");
+				foreach (XmlNode nodeEffet in nodesEffet) {
+					Debug.Log("Je charge l'effet : " + nodeEffet.InnerText);
+					chargerUnEffet(nodeEffet,b);
+				}
+
 				typesDeBatiment.Add(b);
 			}
 
+		}
+
+
+		private void chargerUnEffet(XmlNode node, TypeDeBatiment b) {
+			String type = node.SelectSingleNode ("Type").InnerText;
+			Effet effet = null;
+
+			if (type.Equals ("PRODUIRE")) {
+				EffetProduire e = new EffetProduire();
+				e.quantite = float.Parse(node.SelectSingleNode ("Quantite").InnerText);
+				e.ressource = (Ressources) Enum.Parse (typeof(Ressources), node.SelectSingleNode ("Ressource").InnerText);
+				effet = e;
+			}
+
+			b.ajouterEffet(effet);
 		}
 
 
