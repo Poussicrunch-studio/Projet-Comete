@@ -7,7 +7,7 @@
 		<Categorie>MINISTRE</Categorie>
 		<Niveau>0</Niveau>
 		<Poids>200</Poids>
-		<Prefab>BatimentMoche</Prefab>
+		<Prefab>Habitations</Prefab>
 		<Effet>
 			<Type>PRODUIRE</Type>
 			<Ressource>EAU</Ressource>

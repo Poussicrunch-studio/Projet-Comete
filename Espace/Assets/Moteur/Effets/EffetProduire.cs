@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+using AssemblyCSharp;
+using UnityEngine;
 namespace AssemblyCSharp
 {
 	public class EffetProduire : Effet
@@ -18,6 +20,12 @@ namespace AssemblyCSharp
 
 		public EffetProduire ()
 		{
+		}
+
+		new public void jouer(Batiment batiment) {
+			base.jouer (batiment);
+			Debug.Log ("???");
+			Colonie.instance.produire(ressource,quantite);
 		}
 	}
 }

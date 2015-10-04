@@ -1,4 +1,6 @@
 using System;
+using UnityEngine;
+
 namespace AssemblyCSharp
 {
 	public class Effet
@@ -10,7 +12,7 @@ namespace AssemblyCSharp
 		}
 
 		public void jouer(Batiment batiment) {
-
+			Debug.Log ("Cet effet agit");
 		}
 
 

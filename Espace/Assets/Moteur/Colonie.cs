@@ -9,10 +9,13 @@ namespace AssemblyCSharp
 	{
 		public Dictionary<Ressources, float> reserves = new Dictionary<Ressources, float>();
 		public Dictionary<CategoriesConseiller,Conseiller> conseillers = new Dictionary<CategoriesConseiller,Conseiller>();
+		public static Colonie instance;
 
 		public Colonie ()
 		{
 			Debug.Log ("Creation de la colonie");
+
+			instance = this;
 
 			foreach (Ressources ressource in Enum.GetValues(typeof(Ressources))) {
 				reserves.Add(ressource,0.0f);
@@ -42,6 +45,11 @@ namespace AssemblyCSharp
 
 		public float getQuantiteDeRessource(Ressources r) {
 			return reserves[r];
+		}
+
+		public void produire(Ressources r, float quantite) {
+			reserves [r] += quantite;
+			Debug.Log (reserves [r]);
 		}
 	}
 }
