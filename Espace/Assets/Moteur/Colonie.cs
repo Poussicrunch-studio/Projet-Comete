@@ -49,7 +49,7 @@ namespace AssemblyCSharp
 
 		public void produire(Ressources r, float quantite) {
 			reserves [r] += quantite;
-			Debug.Log (reserves [r]);
+			//Debug.Log ("Nouvelles réserves :" + reserves [r]);
 		}
 	}
 }

@@ -22,8 +22,9 @@
 		<Poids>175</Poids>
 		<Prefab>Habitations</Prefab>
 		<Effet>
-			<Type>POPULATION</Type>
-			<Quantite>20</Quantite>
+			<Type>PRODUIRE</Type>
+			<Ressource>MINERAI</Ressource>
+			<Quantite>10</Quantite>
 		</Effet>
 	</Batiment>
 

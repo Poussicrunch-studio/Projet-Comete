@@ -11,8 +11,7 @@ namespace AssemblyCSharp
 
 		}
 
-		public void jouer(Batiment batiment) {
-			Debug.Log ("Cet effet agit");
+		virtual public void jouer(Batiment batiment) {
 		}
 
 
