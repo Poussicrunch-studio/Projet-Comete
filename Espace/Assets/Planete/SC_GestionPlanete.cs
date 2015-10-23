@@ -191,7 +191,9 @@ public class SC_GestionPlanete : MonoBehaviour {
 		}
 
 
-		Transform t = Instantiate(modeleTuile, new Vector3(getXofHexagone(x,y), getYofHexagone(x,y), 0.0f), Quaternion.identity) as Transform;
+		Transform t = Instantiate(modeleTuile, new Vector3(getXofHexagone(x,y), 0.0f , getYofHexagone(x,y)), Quaternion.identity) as Transform;
+		go.transform.Rotate(new Vector3(1,0,0) * 90.0f, Space.World);
+
 		Case kase = new Case (t.gameObject,x,y);
 		gestionnaire.ajouterUneCase (kase);
 		SC_Case script = t.gameObject.GetComponent<SC_Case>();
