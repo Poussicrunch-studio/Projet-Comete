@@ -13,7 +13,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 	static public float rotationZTuile = 0.0f;
 
 	static public float longueurXTuile = 0.0f;
-	static public float longueurYTuile = 0.0f;
+	static public float longueurZTuile = 0.0f;
 
 	public GestionnaireDePartie gestionnaire; /*Le gestionnaire s'occupe de gerer tout le jeu "interne", pas les graphismes*/
 
@@ -71,7 +71,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 		gestionnaire = new GestionnaireDePartie ();
 
 		longueurXTuile = modeleTuile.GetComponent<Renderer>().bounds.size.x;
-		longueurYTuile = modeleTuile.GetComponent<Renderer>().bounds.size.z;
+		longueurZTuile = modeleTuile.GetComponent<Renderer>().bounds.size.z;
 
 		creerLesCasesInitiales ();
 	}
@@ -168,7 +168,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 				{
 					kaseSelectionnee = hitInfo.transform.gameObject.GetComponent<SC_Case>().kase;
 					xDeLaCase.text = kaseSelectionnee.coordX.ToString();
-					yDeLaCase.text = kaseSelectionnee.coordY.ToString();
+					yDeLaCase.text = kaseSelectionnee.coordZ.ToString();
 					if (batimentEnCoursDeConstruction != null && !kaseSelectionnee.possedeUnBatiment()) {
 						construire (kaseSelectionnee);
 					}
@@ -187,12 +187,12 @@ public class SC_GestionPlanete : MonoBehaviour {
 		//Si la colonne est impaire, -0,5y
 		float yModifie = 0.0f;
 		if (x % 2 != 0) {
-			yModifie = 0.5f * longueurYTuile;
+			yModifie = 0.5f * longueurZTuile;
 		}
 
 
 		Transform t = Instantiate(modeleTuile, new Vector3(getXofHexagone(x,y), 0.0f , getYofHexagone(x,y)), Quaternion.identity) as Transform;
-		go.transform.Rotate(new Vector3(1,0,0) * 90.0f, Space.World);
+		t.transform.Rotate(new Vector3(1,0,0) * 90.0f, Space.World);
 
 		Case kase = new Case (t.gameObject,x,y);
 		gestionnaire.ajouterUneCase (kase);
@@ -207,9 +207,9 @@ public class SC_GestionPlanete : MonoBehaviour {
 	static public float getYofHexagone(int x, int y) {
 		float yModifie = 0.0f;
 		if (x % 2 != 0) {
-			yModifie = 0.5f * longueurYTuile;
+			yModifie = 0.5f * longueurZTuile;
 		}
-		return y * longueurYTuile + yModifie;
+		return y * longueurZTuile + yModifie;
 	}
 
 	public void instancierUnHexagone (int position, Case caseInitiale ) {
@@ -241,7 +241,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 			break;
 		}
 
-		instancierUnHexagone (caseInitiale.coordX + decalX, caseInitiale.coordY + decalY);
+		instancierUnHexagone (caseInitiale.coordX + decalX, caseInitiale.coordZ + decalY);
 
 
 	}

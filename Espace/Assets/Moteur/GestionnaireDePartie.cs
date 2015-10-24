@@ -36,7 +36,7 @@ namespace AssemblyCSharp
 		//"case" est un mot clef du langage. On utilisera donc le merveilleux mot "kase".
 		public void ajouterUneCase(Case kase) {
 			cases.Add(kase);
-			grille [kase.coordX + (maxXCases/2) , kase.coordY + (maxYCases/2)] = kase;
+			grille [kase.coordX + (maxXCases/2) , kase.coordZ + (maxYCases/2)] = kase;
 		}
 
 		public Case obtenirCase(int x, int y) {

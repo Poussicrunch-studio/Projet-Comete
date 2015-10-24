@@ -13,12 +13,12 @@ namespace AssemblyCSharp
 		GameObject tuile;
 		List<Case> cases = new List<Case> ();
 		Batiment batiment;
-		public int coordX, coordY;
+		public int coordX, coordZ;
 
-		public Case (GameObject tuile, int coordX, int coordY)
+		public Case (GameObject tuile, int coordX, int coordZ)
 		{
 			this.coordX = coordX;
-			this.coordY = coordY;
+			this.coordZ = coordZ;
 			this.tuile = tuile;
 		}
 
@@ -45,7 +45,7 @@ namespace AssemblyCSharp
 		public void construire(Batiment b) {
 			batiment = b;
 			GameObject go = (GameObject) MonoBehaviour.Instantiate(b.type.prefab, 
-			                                                       new Vector3(SC_GestionPlanete.getXofHexagone(coordX,coordY), SC_GestionPlanete.getYofHexagone(coordX,coordY), 0.0f),
+			                                                       new Vector3(SC_GestionPlanete.getXofHexagone(coordX,coordZ), 0.0f, SC_GestionPlanete.getYofHexagone(coordX,coordZ)),
 			                          Quaternion.identity);
 			SC_DataForPrefab script = go.GetComponent<SC_DataForPrefab>();
 
