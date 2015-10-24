@@ -14,6 +14,7 @@ namespace AssemblyCSharp
 		List<Case> cases = new List<Case> ();
 		Batiment batiment;
 		public int coordX, coordZ;
+		public static Case caseSelectionnee;
 
 		public Case (GameObject tuile, int coordX, int coordZ)
 		{
@@ -32,6 +33,18 @@ namespace AssemblyCSharp
 			if (possedeUnBatiment ()) {
 				batiment.jouer ();
 			}
+		}
+
+		public void selectionner() {
+			if (caseSelectionnee != null) {
+				caseSelectionnee.deselectionner();
+			}
+			caseSelectionnee = this;
+			tuile.GetComponent<SC_Case>().selectionner();
+		}
+
+		public void deselectionner() {
+			tuile.GetComponent<SC_Case>().deselectionner();
 		}
 
 		public Boolean possedeUnBatiment() {

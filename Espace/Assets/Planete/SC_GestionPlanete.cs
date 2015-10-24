@@ -16,6 +16,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 	static public float longueurZTuile = 0.0f;
 
 	public GestionnaireDePartie gestionnaire; /*Le gestionnaire s'occupe de gerer tout le jeu "interne", pas les graphismes*/
+	public static SC_GestionPlanete instance;
 
 	//Pour l'interface
 	public Case kaseSelectionnee;
@@ -41,10 +42,14 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public Button bScientifique;
 	public Button bGouverneur;
 
+	public int tailleDuMondeX = 50;
+	public int tailleDuMondeZ = 50;
 	
 	
 	//Pour le mode construction
 	public Batiment batimentEnCoursDeConstruction = null;
+
+	public Transform selecteurDeCase;
 
 	
 
@@ -73,19 +78,20 @@ public class SC_GestionPlanete : MonoBehaviour {
 		longueurXTuile = modeleTuile.GetComponent<Renderer>().bounds.size.x;
 		longueurZTuile = modeleTuile.GetComponent<Renderer>().bounds.size.z;
 
+		instance = this;
+
 		creerLesCasesInitiales ();
 	}
 
 
 
 	private void creerLesCasesInitiales() {
-		instancierUnHexagone (1, 0);
-		instancierUnHexagone (0, 1);
-		instancierUnHexagone (-1, 0);
-		instancierUnHexagone (0, -1);
-		instancierUnHexagone (1, -1);
-		instancierUnHexagone (-1, -1);
-		instancierUnHexagone (0, 0);
+
+		for (int i = tailleDuMondeX / 2 * (-1); i < tailleDuMondeX / 2; i++) {
+			for (int j = tailleDuMondeZ / 2 * (-1); j < tailleDuMondeZ / 2; j++) {
+				instancierUnHexagone (i, j);
+			}
+		}
 
 
 	}
@@ -169,6 +175,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 					kaseSelectionnee = hitInfo.transform.gameObject.GetComponent<SC_Case>().kase;
 					xDeLaCase.text = kaseSelectionnee.coordX.ToString();
 					yDeLaCase.text = kaseSelectionnee.coordZ.ToString();
+					kaseSelectionnee.selectionner();
 					if (batimentEnCoursDeConstruction != null && !kaseSelectionnee.possedeUnBatiment()) {
 						construire (kaseSelectionnee);
 					}
