@@ -23,6 +23,10 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public Text xDeLaCase;
 	public Text yDeLaCase;
 	public Canvas canvasActions;
+	public GameObject panelPropositions;
+	public GameObject panelInfoPropositions;
+	public GameObject panelSelectionBatiment;
+	public GameObject panelInfoBatiment;
 
 	//Ressources et population pour l'IU
 	public Text infoNourriture;
@@ -51,6 +55,8 @@ public class SC_GestionPlanete : MonoBehaviour {
 
 	public Transform selecteurDeCase;
 
+	//Etat du jeu
+	public bool propositionEnCours = false;
 	
 
 	/* Je propose une terminologie pour manipuler les hexagones :
@@ -86,14 +92,11 @@ public class SC_GestionPlanete : MonoBehaviour {
 
 
 	private void creerLesCasesInitiales() {
-
 		for (int i = tailleDuMondeX / 2 * (-1); i < tailleDuMondeX / 2; i++) {
 			for (int j = tailleDuMondeZ / 2 * (-1); j < tailleDuMondeZ / 2; j++) {
 				instancierUnHexagone (i, j);
 			}
 		}
-
-
 	}
 	
 	// Update is called once per frame
@@ -127,13 +130,19 @@ public class SC_GestionPlanete : MonoBehaviour {
 		if (proposition != null) {
 			Debug.Log("Proposition : " + proposition.getNom());
 			batimentEnCoursDeConstruction = proposition;
+			propositionEnCours = false;
+			panelPropositions.SetActive(false);
+			panelInfoPropositions.SetActive(false);
+			panelInfoBatiment.SetActive(true);
+			panelSelectionBatiment.SetActive(true);
 		} else {
 			Debug.Log("Pas de proposition");
 		}
 	}
 
 	private void afficherLesPropositions() {
-	//	if (gestionnaire.colonie.conseillers[CategoriesConseiller.GENERAL]
+		panelPropositions.SetActive(true);
+		panelInfoPropositions.SetActive(true);
 	}
 
 	private void gererLesInfos() {
@@ -151,6 +160,10 @@ public class SC_GestionPlanete : MonoBehaviour {
 		Debug.Log ("Fin du tour");
 		gestionnaire.jouerUnTour ();
 		canvasActions.enabled = true;
+		propositionEnCours = true;
+		afficherLesPropositions ();
+		panelInfoBatiment.SetActive(false);
+		panelSelectionBatiment.SetActive(false);
 	
 	}
 

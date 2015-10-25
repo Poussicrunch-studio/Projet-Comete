@@ -27,7 +27,6 @@ public class SC_Case : MonoBehaviour {
 	}
 
 	public void deselectionner() {
-		Debug.Log ("desel");
 		Destroy (selecteur.gameObject);
 	}
 }
