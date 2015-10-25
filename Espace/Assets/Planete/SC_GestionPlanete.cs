@@ -59,7 +59,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 
 	//Etat du jeu
 	public bool propositionEnCours = false;
-	
+	public Proposition propositionActuelle;
 
 	/* Je propose une terminologie pour manipuler les hexagones :
 	 * l'hexagone++ d'un hexagone donné est celui positionné en haut à droite (+x+y)
@@ -128,9 +128,13 @@ public class SC_GestionPlanete : MonoBehaviour {
 		selectionnerUneProposition (CategoriesConseiller.EXPLORATEUR);
 	}
 	public void selectionnerUneProposition(CategoriesConseiller c) {
-		Proposition proposition = gestionnaire.colonie.conseillers[c].proposition;
-		if (proposition.getBatiments().Count > 0) {
-			Batiment bat = proposition.getBatiments()[0];
+		propositionActuelle = gestionnaire.colonie.conseillers[c].proposition;
+		scriptPanelInfoPropositions.updateProposition (propositionActuelle);
+	}
+
+	public void validerProposition() {
+		if (propositionActuelle.getBatiments().Count > 0) {
+			Batiment bat = propositionActuelle.getBatiments()[0];
 			batimentEnCoursDeConstruction = bat;
 			Colonie.instance.batimentsDisponibles.Add(bat);
 			propositionEnCours = false;
@@ -138,10 +142,9 @@ public class SC_GestionPlanete : MonoBehaviour {
 			panelInfoPropositions.SetActive(false);
 			panelInfoBatiment.SetActive(true);
 			panelSelectionBatiment.SetActive(true);
-		} else {
-			Debug.Log("Pas de proposition");
 		}
 	}
+
 
 	private void afficherLesPropositions() {
 		panelPropositions.SetActive(true);
@@ -164,6 +167,8 @@ public class SC_GestionPlanete : MonoBehaviour {
 		gestionnaire.jouerUnTour ();
 		canvasActions.enabled = true;
 		propositionEnCours = true;
+		propositionActuelle = null;
+		scriptPanelInfoPropositions.updateProposition (propositionActuelle);
 		afficherLesPropositions ();
 		panelInfoBatiment.SetActive(false);
 		panelSelectionBatiment.SetActive(false);

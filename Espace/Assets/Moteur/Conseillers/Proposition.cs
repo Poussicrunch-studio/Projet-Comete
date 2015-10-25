@@ -25,6 +25,10 @@ namespace AssemblyCSharp
 		public List<Batiment> getBatiments() {
 			return batiments;
 		}
+
+		public bool estVide() {
+			return batiments.Count == 0;
+		}
 	}
 }
 
