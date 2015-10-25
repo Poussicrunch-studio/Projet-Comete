@@ -28,6 +28,8 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public GameObject panelSelectionBatiment;
 	public GameObject panelInfoBatiment;
 
+	public SC_PanelInfoProp scriptPanelInfoPropositions;
+
 	//Ressources et population pour l'IU
 	public Text infoNourriture;
 	public Text infoOxygene;
@@ -126,10 +128,11 @@ public class SC_GestionPlanete : MonoBehaviour {
 		selectionnerUneProposition (CategoriesConseiller.EXPLORATEUR);
 	}
 	public void selectionnerUneProposition(CategoriesConseiller c) {
-		Batiment proposition = gestionnaire.colonie.conseillers[c].proposition;
-		if (proposition != null) {
-			Debug.Log("Proposition : " + proposition.getNom());
-			batimentEnCoursDeConstruction = proposition;
+		Proposition proposition = gestionnaire.colonie.conseillers[c].proposition;
+		if (proposition.getBatiments().Count > 0) {
+			Batiment bat = proposition.getBatiments()[0];
+			batimentEnCoursDeConstruction = bat;
+			Colonie.instance.batimentsDisponibles.Add(bat);
 			propositionEnCours = false;
 			panelPropositions.SetActive(false);
 			panelInfoPropositions.SetActive(false);

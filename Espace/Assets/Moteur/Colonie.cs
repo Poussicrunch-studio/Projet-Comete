@@ -10,6 +10,7 @@ namespace AssemblyCSharp
 		public Dictionary<Ressources, float> reserves = new Dictionary<Ressources, float>();
 		public Dictionary<CategoriesConseiller,Conseiller> conseillers = new Dictionary<CategoriesConseiller,Conseiller>();
 		public static Colonie instance;
+		public List<Batiment> batimentsDisponibles = new List<Batiment> ();
 
 		public Colonie ()
 		{
