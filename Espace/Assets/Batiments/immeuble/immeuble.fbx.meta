@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: 3f5cde0b3d2eb492fb7818c600e3e68e
+timeCreated: 1443558203
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Cube
+    100002: Cube.001
+    100004: Cube.002
+    100006: Cube.003
+    100008: Cube.004
+    100010: Cube.005
+    100012: Cube.006
+    100014: //RootNode
+    100016: tour shopping
+    100018: tour shopping.001
+    100020: tour shopping.002
+    100022: tour shopping.003
+    100024: tour shopping.004
+    100026: tour shopping.005
+    100028: tour shopping.006
+    100030: tour shopping.007
+    100032: tour shopping.008
+    100034: tour shopping.009
+    100036: tour shopping.010
+    100038: tour shopping.011
+    100040: tour shopping.012
+    100042: tour shopping.013
+    400000: Cube
+    400002: Cube.001
+    400004: Cube.002
+    400006: Cube.003
+    400008: Cube.004
+    400010: Cube.005
+    400012: Cube.006
+    400014: //RootNode
+    400016: tour shopping
+    400018: tour shopping.001
+    400020: tour shopping.002
+    400022: tour shopping.003
+    400024: tour shopping.004
+    400026: tour shopping.005
+    400028: tour shopping.006
+    400030: tour shopping.007
+    400032: tour shopping.008
+    400034: tour shopping.009
+    400036: tour shopping.010
+    400038: tour shopping.011
+    400040: tour shopping.012
+    400042: tour shopping.013
+    2300000: Cube
+    2300002: Cube.001
+    2300004: Cube.002
+    2300006: Cube.003
+    2300008: Cube.004
+    2300010: Cube.005
+    2300012: Cube.006
+    2300014: tour shopping
+    2300016: tour shopping.001
+    2300018: tour shopping.002
+    2300020: tour shopping.003
+    2300022: tour shopping.004
+    2300024: tour shopping.005
+    2300026: tour shopping.006
+    2300028: tour shopping.007
+    2300030: tour shopping.008
+    2300032: tour shopping.009
+    2300034: tour shopping.010
+    2300036: tour shopping.011
+    2300038: tour shopping.012
+    2300040: tour shopping.013
+    3300000: Cube
+    3300002: Cube.001
+    3300004: Cube.002
+    3300006: Cube.003
+    3300008: Cube.004
+    3300010: Cube.005
+    3300012: Cube.006
+    3300014: tour shopping
+    3300016: tour shopping.001
+    3300018: tour shopping.002
+    3300020: tour shopping.003
+    3300022: tour shopping.004
+    3300024: tour shopping.005
+    3300026: tour shopping.006
+    3300028: tour shopping.007
+    3300030: tour shopping.008
+    3300032: tour shopping.009
+    3300034: tour shopping.010
+    3300036: tour shopping.011
+    3300038: tour shopping.012
+    3300040: tour shopping.013
+    4300000: Cube.006
+    4300002: Cube.005
+    4300004: Cube.004
+    4300006: Cube.002
+    4300008: Cube.001
+    4300010: Cube
+    4300012: tour shopping
+    4300014: tour shopping.001
+    4300016: tour shopping.002
+    4300018: tour shopping.003
+    4300020: Cube.003
+    4300022: tour shopping.004
+    4300024: tour shopping.005
+    4300026: tour shopping.006
+    4300028: tour shopping.007
+    4300030: tour shopping.008
+    4300032: tour shopping.009
+    4300034: tour shopping.010
+    4300036: tour shopping.011
+    4300038: tour shopping.012
+    4300040: tour shopping.013
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

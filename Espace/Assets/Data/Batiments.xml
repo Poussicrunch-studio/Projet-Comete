@@ -7,7 +7,7 @@
 		<Categorie>NULL</Categorie>
 		<Niveau>0</Niveau>
 		<Poids>0</Poids>
-		<Prefab>Habitations</Prefab>
+		<Prefab>Navette_Prefab</Prefab>
 	</Batiment>
 	
 	<Batiment>
@@ -28,7 +28,7 @@
 		<Categorie>GOUVERNEUR</Categorie>
 		<Niveau>0</Niveau>
 		<Poids>175</Poids>
-		<Prefab>Habitations</Prefab>
+		<Prefab>Usine</Prefab>
 		<Effet>
 			<Type>PRODUIRE</Type>
 			<Ressource>MINERAI</Ressource>

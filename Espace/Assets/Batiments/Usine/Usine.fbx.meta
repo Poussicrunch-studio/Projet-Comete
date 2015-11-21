@@ -1,0 +1,126 @@
+fileFormatVersion: 2
+guid: 65c9979bf61c54009a2cd00ed440bab6
+timeCreated: 1444086803
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: cheminee
+    100002: cheminee02
+    100004: cheminee03
+    100006: cheminee04
+    100008: //RootNode
+    100010: Usine
+    100012: usine
+    100014: Usine _principale
+    100016: usine01
+    100018: usine03
+    100020: usine04
+    100022: Usine05
+    400000: cheminee
+    400002: cheminee02
+    400004: cheminee03
+    400006: cheminee04
+    400008: //RootNode
+    400010: Usine
+    400012: usine
+    400014: Usine _principale
+    400016: usine01
+    400018: usine03
+    400020: usine04
+    400022: Usine05
+    2300000: cheminee
+    2300002: cheminee02
+    2300004: cheminee03
+    2300006: cheminee04
+    2300008: Usine
+    2300010: usine
+    2300012: Usine _principale
+    2300014: usine01
+    2300016: usine03
+    2300018: usine04
+    2300020: Usine05
+    3300000: cheminee
+    3300002: cheminee02
+    3300004: cheminee03
+    3300006: cheminee04
+    3300008: Usine
+    3300010: usine
+    3300012: Usine _principale
+    3300014: usine01
+    3300016: usine03
+    3300018: usine04
+    3300020: Usine05
+    4300000: usine04
+    4300002: usine03
+    4300004: usine
+    4300006: usine01
+    4300008: cheminee02
+    4300010: Usine _principale
+    4300012: cheminee
+    4300014: cheminee03
+    4300016: cheminee04
+    4300018: Usine05
+    4300020: Usine
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

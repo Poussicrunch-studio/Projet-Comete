@@ -22,6 +22,9 @@ public class SC_Case : MonoBehaviour {
 		                                                       new Vector3(0.0f, 0.0f, 0.0f),
 		                                                     Quaternion.identity) as Transform;
 		go.transform.SetParent(gameObject.transform);
+		go.transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+		go.transform.rotation = transform.rotation;
+
 		selecteur = go;
 
 	}

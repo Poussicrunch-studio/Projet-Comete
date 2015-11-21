@@ -1,0 +1,116 @@
+fileFormatVersion: 2
+guid: e19a919e5198a4d9e9ef6a597ac8158f
+timeCreated: 1447189069
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: hopital
+    100004: hopital.001
+    100006: hopital_grand
+    100008: hopital_H
+    100010: hopital_parking
+    100012: "hop\xEEtal_porte"
+    100014: "hop\xEEtal_porte.001"
+    100016: "hop\xEEtal_porte.002"
+    100018: "hop\xEEtal_porte.003"
+    400000: //RootNode
+    400002: hopital
+    400004: hopital.001
+    400006: hopital_grand
+    400008: hopital_H
+    400010: hopital_parking
+    400012: "hop\xEEtal_porte"
+    400014: "hop\xEEtal_porte.001"
+    400016: "hop\xEEtal_porte.002"
+    400018: "hop\xEEtal_porte.003"
+    2300000: hopital
+    2300002: hopital.001
+    2300004: hopital_grand
+    2300006: hopital_H
+    2300008: hopital_parking
+    2300010: "hop\xEEtal_porte"
+    2300012: "hop\xEEtal_porte.001"
+    2300014: "hop\xEEtal_porte.002"
+    2300016: "hop\xEEtal_porte.003"
+    3300000: hopital
+    3300002: hopital.001
+    3300004: hopital_grand
+    3300006: hopital_H
+    3300008: hopital_parking
+    3300010: "hop\xEEtal_porte"
+    3300012: "hop\xEEtal_porte.001"
+    3300014: "hop\xEEtal_porte.002"
+    3300016: "hop\xEEtal_porte.003"
+    4300000: hopital.001
+    4300002: "hop\xEEtal_porte.003"
+    4300004: "hop\xEEtal_porte.002"
+    4300006: "hop\xEEtal_porte.001"
+    4300008: "hop\xEEtal_porte"
+    4300010: hopital_parking
+    4300012: hopital_H
+    4300014: hopital
+    4300016: hopital_grand
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
