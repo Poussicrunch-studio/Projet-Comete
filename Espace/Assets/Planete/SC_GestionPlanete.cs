@@ -7,6 +7,7 @@ using AssemblyCSharp;
 public class SC_GestionPlanete : MonoBehaviour {
 
 	public Transform modeleTuile;
+	public Transform modelePanelDataBatiment;
 
 	static public float rotationXTuile = 0.0f;
 	static public float rotationYTuile = 0.0f;
@@ -128,6 +129,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 		selectionnerUneProposition (CategoriesConseiller.EXPLORATEUR);
 	}
 	public void selectionnerUneProposition(CategoriesConseiller c) {
+		Debug.Log ("Categorie sélectionnée : " + c.ToString());
 		propositionActuelle = gestionnaire.colonie.conseillers[c].proposition;
 		scriptPanelInfoPropositions.updateProposition (propositionActuelle);
 	}
