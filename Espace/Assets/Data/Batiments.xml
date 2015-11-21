@@ -3,6 +3,14 @@
 <Batiments>
 
 	<Batiment>
+		<Nom>Vaisseau</Nom>
+		<Categorie>NULL</Categorie>
+		<Niveau>0</Niveau>
+		<Poids>0</Poids>
+		<Prefab>Habitations</Prefab>
+	</Batiment>
+	
+	<Batiment>
 		<Nom>Forage</Nom>
 		<Categorie>MINISTRE</Categorie>
 		<Niveau>0</Niveau>

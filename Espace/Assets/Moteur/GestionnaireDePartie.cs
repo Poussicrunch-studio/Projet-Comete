@@ -16,6 +16,8 @@ namespace AssemblyCSharp
 		public static int maxYCases = 1000;
 		public Case[,] grille = new Case[maxXCases,maxYCases]; 
 
+
+
 		public GestionnaireDePartie ()
 		{
 			DataManager dm = new DataManager ();

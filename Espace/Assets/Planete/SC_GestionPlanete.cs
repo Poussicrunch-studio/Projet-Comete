@@ -100,6 +100,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 				instancierUnHexagone (i, j);
 			}
 		}
+		gestionnaire.obtenirCase (0, 0).construire (new Batiment(DataManager.dataManager.getTypeDeBatiment("Vaisseau")));
 	}
 	
 	// Update is called once per frame
@@ -142,8 +143,8 @@ public class SC_GestionPlanete : MonoBehaviour {
 			propositionEnCours = false;
 			panelPropositions.SetActive(false);
 			panelInfoPropositions.SetActive(false);
-			panelInfoBatiment.SetActive(true);
-			panelSelectionBatiment.SetActive(true);
+			//panelInfoBatiment.SetActive(true);
+			//panelSelectionBatiment.SetActive(true);
 		}
 	}
 

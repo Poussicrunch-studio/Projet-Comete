@@ -88,7 +88,10 @@ namespace AssemblyCSharp
 				b.poids = int.Parse (node.SelectSingleNode ("Poids").InnerText);
 				b.niveau = int.Parse (node.SelectSingleNode ("Niveau").InnerText);
 				b.nom = node.SelectSingleNode ("Nom").InnerText;
-				b.categorie = (CategoriesConseiller) Enum.Parse (typeof(CategoriesConseiller), node.SelectSingleNode ("Categorie").InnerText);
+				Debug.Log (node.SelectSingleNode ("Categorie").InnerText);
+				if (node.SelectSingleNode ("Categorie").InnerText != "NULL") {
+					b.categorie = (CategoriesConseiller) Enum.Parse (typeof(CategoriesConseiller), node.SelectSingleNode ("Categorie").InnerText);
+				}
 				b.prefab = globalPrefabs.getPrefab(node.SelectSingleNode("Prefab").InnerText);
 
 				//Chargement des effets
@@ -118,6 +121,14 @@ namespace AssemblyCSharp
 			b.ajouterEffet(effet);
 		}
 
+		public TypeDeBatiment getTypeDeBatiment(String nom) {
+			foreach (TypeDeBatiment b in typesDeBatiment) {
+				if (b.nom.Equals(nom)) {
+					return b;
+				}
+			}
+			return null;
+		}
 
 		/**
 		 * 		public List<PoliticOrientation> loadPoliticOrientation() {
