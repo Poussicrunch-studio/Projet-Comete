@@ -23,6 +23,7 @@ public class SC_GenerateurPlanete : MonoBehaviour {
 		for (int i = 0; i < data.alphamapWidth; i++) {
 			for (int j = 0; j < data.alphamapHeight; j++) {
 				if ((i+j)%2 == 0) {
+					//data.get
 					alphas[i, j, 1] = 1000;
 					//alphas[i, j, 2] = 70;
 					alphas[i, j, 0] = 0;
