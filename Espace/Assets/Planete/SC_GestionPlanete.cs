@@ -62,6 +62,8 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public bool propositionEnCours = false;
 	public Proposition propositionActuelle;
 
+	public SC_GenerateurPlanete generateur;
+
 	/* Je propose une terminologie pour manipuler les hexagones :
 	 * l'hexagone++ d'un hexagone donné est celui positionné en haut à droite (+x+y)
 	 * Le += juste à droite (+x=y), et ainsi de suite.
@@ -90,6 +92,8 @@ public class SC_GestionPlanete : MonoBehaviour {
 		instance = this;
 
 		creerLesCasesInitiales ();
+
+		generateur.generer ();
 	}
 
 
