@@ -7,7 +7,7 @@ namespace AssemblyCSharp
 	public class GestionnaireDePartie
 	{
 
-		List<Case> cases = new List<Case>(); /*Liste des cases du jeu*/
+		public List<Case> cases = new List<Case>(); /*Liste des cases du jeu*/
 		public int tour = 0;
 		public Joueur joueur;
 		public Colonie colonie;

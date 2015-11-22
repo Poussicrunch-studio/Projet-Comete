@@ -10,7 +10,14 @@ namespace AssemblyCSharp
 
 	public enum Terrains
 	{
-		PRAIRIE,DESERT,TOUNDRA,COLLINE,FORET,BANQUISE,JUNGLE,MONTAGNE,
+		PRAIRIE = 0,
+		DESERT = 1,
+		TOUNDRA = 2,
+		COLLINE = 3,
+		FORET = 4,
+		BANQUISE = 5,
+		JUNGLE = 6,
+		MONTAGNE = 7,
 	}
 }
 

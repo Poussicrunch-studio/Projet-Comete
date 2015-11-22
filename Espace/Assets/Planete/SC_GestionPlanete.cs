@@ -95,7 +95,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 
 		generateur.generer (longueurXTuile,longueurZTuile);
 		gestionnaire.obtenirCase (0, 0).construire (new Batiment(DataManager.dataManager.getTypeDeBatiment("Vaisseau")));
-
+		generateur.creerMondeAleatoire (gestionnaire.cases);
 	}
 
 

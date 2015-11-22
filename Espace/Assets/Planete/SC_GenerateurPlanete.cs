@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using AssemblyCSharp;
+using System.Collections.Generic;
+using System;
+
 public class SC_GenerateurPlanete : MonoBehaviour {
 
 
@@ -40,22 +43,15 @@ public class SC_GenerateurPlanete : MonoBehaviour {
 
 		for (int i = 0; i < data.alphamapWidth; i++) {
 			for (int j = 0; j < data.alphamapHeight; j++) {
-				if ((i+j)%2 == 0) {
-					//data.get
-					alphas[i, j, 1] = 1000;
-					//alphas[i, j, 2] = 70;
-					alphas[i, j, 0] = 0;
+				foreach (Terrains t in Enum.GetValues(typeof(Terrains)))
+				{
+					alphas[j, i, (int) t] = 0;
 				}
-				else {
-					alphas[i, j, 0] = 1000;
-					alphas[i, j, 1] = 0;
-					//alphas[i, j, 2] = 70;
-
-				}
+				alphas[j, i, (int) Terrains.BANQUISE] = 100;
 			}
 		}
 		data.SetAlphamaps(0, 0, alphas);
-		changeHexagoneTexture (0, 0, Terrains.FORET);
+		changeHexagoneTexture (0, 0, Terrains.BANQUISE);
 	}
 
 	public void changeHexagoneTexture(int x, int z, Terrains typeTerrain) {
@@ -70,7 +66,7 @@ public class SC_GenerateurPlanete : MonoBehaviour {
 		int patchMaxX = (int) Mathf.Ceil((cX + (0.5f * lx) - tX) / dx);
 		int patchMaxZ = (int) Mathf.Ceil((cZ + (0.5f * lz) - tZ) / dz);
 
-		Debug.Log("dx: " + dx);
+/*		Debug.Log("dx: " + dx);
 		Debug.Log("dz: " + dz);
 		Debug.Log("Position hexagone X: " + kase.transform.position.x);
 		Debug.Log("Position hexagone Z: " + kase.transform.position.z);
@@ -79,7 +75,7 @@ public class SC_GenerateurPlanete : MonoBehaviour {
 		Debug.Log("Position terrain patchMinX: " + patchMinX);
 		Debug.Log("Position terrain patchMaxX: " + patchMaxX);
 		Debug.Log("Position terrain patchMinZ: " + patchMinZ);
-		Debug.Log("Position terrain patchMaxZ: " + patchMaxZ);
+		Debug.Log("Position terrain patchMaxZ: " + patchMaxZ);*/
 
 	//	for (int i = 0; i < data.alphamapWidth; i++) {
 	//		for (int j = 0; j < data.alphamapHeight; j++) {
@@ -90,13 +86,13 @@ public class SC_GenerateurPlanete : MonoBehaviour {
 			for (int j = patchMinZ; j < patchMaxZ; j++) {
 				float newX = Mathf.Abs((i*dx) + terrain.transform.position.x - kase.transform.position.x);
 				float newZ = Mathf.Abs((j*dz) + terrain.transform.position.z - kase.transform.position.z);
-				Debug.Log("i,j" + i + j + " nX, nZ : " + newX + " " + newZ);
+			//	Debug.Log("i,j" + i + j + " nX, nZ : " + newX + " " + newZ);
 				if (2*v*h - v*newZ - h*newX >= 0) {
-					foreach (Terrains t in Terrains.GetValues(typeof(Terrains)))
+					foreach (Terrains t in Enum.GetValues(typeof(Terrains)))
 					{
-
 						alphas[j, i, (int) t] = 0;
 					}
+			//		Debug.Log("Type ter : " + typeTerrain + " " + (int) typeTerrain);
 					alphas[j, i, (int) typeTerrain] = 100;
 				}
 
@@ -106,4 +102,14 @@ public class SC_GenerateurPlanete : MonoBehaviour {
 
 	}
 
+	public void creerMondeAleatoire(List<Case> cases) {
+		int i = 0;
+		foreach (Case kase in cases) {
+			if (i < 1000) {
+			//	Debug.Log("i:"+i + " coord : " + kase.coordX + " " + kase.coordZ);
+				kase.changeTerrain(Terrains.FORET);
+				i++;
+			}
+		}
+	}
 }
