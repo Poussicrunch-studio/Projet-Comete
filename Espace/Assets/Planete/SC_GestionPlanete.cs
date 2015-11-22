@@ -93,7 +93,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 
 		creerLesCasesInitiales ();
 
-		generateur.generer ();
+		generateur.generer (longueurXTuile,longueurZTuile);
 	}
 
 

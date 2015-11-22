@@ -15,7 +15,7 @@ namespace AssemblyCSharp
 		public static int maxXCases = 1000;
 		public static int maxYCases = 1000;
 		public Case[,] grille = new Case[maxXCases,maxYCases]; 
-
+		public static GestionnaireDePartie instance;
 
 
 		public GestionnaireDePartie ()
@@ -23,6 +23,7 @@ namespace AssemblyCSharp
 			DataManager dm = new DataManager ();
 			joueur = new Joueur ();
 			colonie = new Colonie ();
+			instance = this;
 		}
 
 		public void jouerUnTour() {

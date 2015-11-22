@@ -10,7 +10,7 @@ namespace AssemblyCSharp
 	public class Case
 	{
 		public Terrains terrain;  //c'est jacques !!!
-		GameObject tuile;
+		public GameObject tuile;
 		List<Case> cases = new List<Case> ();
 		Batiment batiment;
 		public int coordX, coordZ;
