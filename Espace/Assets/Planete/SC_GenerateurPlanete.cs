@@ -10,7 +10,11 @@ public class SC_GenerateurPlanete : MonoBehaviour {
 	public float dz;
 	public float lx;
 	public float lz;
+	public static SC_GenerateurPlanete instance;
 
+	void Awake () {
+		SC_GenerateurPlanete.instance = this;
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -51,10 +55,10 @@ public class SC_GenerateurPlanete : MonoBehaviour {
 			}
 		}
 		data.SetAlphamaps(0, 0, alphas);
-		changeHexagoneTexture (0, 0, 3);
+		changeHexagoneTexture (0, 0, Terrains.FORET);
 	}
 
-	public void changeHexagoneTexture(int x, int z, int textureID) {
+	public void changeHexagoneTexture(int x, int z, Terrains typeTerrain) {
 		float[, ,] alphas = data.GetAlphamaps(0, 0, data.alphamapWidth, data.alphamapHeight);
 		GameObject kase = GestionnaireDePartie.instance.obtenirCase (x, z).tuile;
 		float cX = kase.transform.position.x;
@@ -87,11 +91,13 @@ public class SC_GenerateurPlanete : MonoBehaviour {
 				float newX = Mathf.Abs((i*dx) + terrain.transform.position.x - kase.transform.position.x);
 				float newZ = Mathf.Abs((j*dz) + terrain.transform.position.z - kase.transform.position.z);
 				Debug.Log("i,j" + i + j + " nX, nZ : " + newX + " " + newZ);
-				if (2*v*h - v*newX - h*newZ >= 0) {
-					alphas[j, i, 1] = 0;
-					alphas[j, i, 2] = 0;
-					alphas[j, i, 4] = 200;
-					alphas[j, i, 0] = 0;
+				if (2*v*h - v*newZ - h*newX >= 0) {
+					foreach (Terrains t in Terrains.GetValues(typeof(Terrains)))
+					{
+
+						alphas[j, i, (int) t] = 0;
+					}
+					alphas[j, i, (int) typeTerrain] = 100;
 				}
 
 			}

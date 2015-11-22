@@ -23,6 +23,10 @@ namespace AssemblyCSharp
 			this.tuile = tuile;
 		}
 
+		public void changeTerrain (Terrains t) {
+			SC_GenerateurPlanete.instance.changeHexagoneTexture (coordX,coordZ,0);
+		}
+
 		public List<Case> getCasesVoisines() {
 			return cases;
 		}
@@ -64,6 +68,7 @@ namespace AssemblyCSharp
 
 			go.transform.Rotate(new Vector3(1,0,0) * script.rotationX, Space.World);
 			go.transform.Translate (new Vector3(script.decalageEnX,script.decalageEnY,script.decalageEnZ));
+			changeTerrain (Terrains.DESERT);
 			//t.parent = tuile;
 		}
 	}

@@ -94,6 +94,8 @@ public class SC_GestionPlanete : MonoBehaviour {
 		creerLesCasesInitiales ();
 
 		generateur.generer (longueurXTuile,longueurZTuile);
+		gestionnaire.obtenirCase (0, 0).construire (new Batiment(DataManager.dataManager.getTypeDeBatiment("Vaisseau")));
+
 	}
 
 
@@ -104,7 +106,6 @@ public class SC_GestionPlanete : MonoBehaviour {
 				instancierUnHexagone (i, j);
 			}
 		}
-		gestionnaire.obtenirCase (0, 0).construire (new Batiment(DataManager.dataManager.getTypeDeBatiment("Vaisseau")));
 	}
 	
 	// Update is called once per frame
