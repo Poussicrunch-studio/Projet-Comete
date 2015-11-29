@@ -16,10 +16,18 @@ namespace AssemblyCSharp
 		public List<TypeDeBatiment> batimentsDisponibles = new List<TypeDeBatiment>();
 		public Proposition proposition;
 
+		public Faction faction;
+
 		public Conseiller (CategoriesConseiller categorie)
 		{
 			this.categorie = categorie;
 			genererLesListesDeBatimentsDisponibles ();
+			definirFactionAleatoire ();
+			Debug.Log (faction.nom);
+		}
+
+		public void definirFactionAleatoire() {
+			faction = DataManager.dataManager.getRandomFaction ();
 		}
 
 

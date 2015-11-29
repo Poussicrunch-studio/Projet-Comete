@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Factions>
+
+	<Faction>
+		<Nom>Bureaucrates</Nom>
+		<Sprite>bureaucrate</Sprite>
+	</Faction>
+	
+	<Faction>
+		<Nom>Mafia</Nom>
+		<Sprite>mafia</Sprite>
+	</Faction>
+
+	<Faction>
+		<Nom>Hackers</Nom>
+		<Sprite>hacker</Sprite>
+	</Faction>
+	
+	<Faction>
+		<Nom>Cultistes</Nom>
+		<Sprite>cultiste</Sprite>
+	</Faction>
+	
+	<Faction>
+		<Nom>Ecologistes</Nom>
+		<Sprite>ecolo</Sprite>
+	</Faction>
+	
+</Factions>

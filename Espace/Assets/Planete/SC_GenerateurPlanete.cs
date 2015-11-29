@@ -107,12 +107,12 @@ public class SC_GenerateurPlanete : MonoBehaviour {
 		rechargerCacheAlphaMap ();
 		int i = 0;
 		foreach (Case kase in cases) {
-		//	if (i < 1000) {
-			//	Debug.Log("i:"+i + " coord : " + kase.coordX + " " + kase.coordZ);
+		if (i < 200) {
+				Debug.Log("i:"+i + " coord : " + kase.coordX + " " + kase.coordZ);
 				Debug.Log("Case " + i + "/" + cases.Count);
 				kase.changerTerrain(Terrains.FORET, true);
 				i++;
-		//	}
+			}
 		}
 		appliquerCacheAlphaMap ();
 	}

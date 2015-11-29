@@ -49,6 +49,12 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public Button bScientifique;
 	public Button bGouverneur;
 
+	public Image iGeneral;
+	public Image iMinistre;
+	public Image iExplorateur;
+	public Image iScientifique;
+	public Image iGouverneur;
+
 	public int tailleDuMondeX = 50;
 	public int tailleDuMondeZ = 50;
 	
@@ -96,6 +102,12 @@ public class SC_GestionPlanete : MonoBehaviour {
 		generateur.generer (longueurXTuile,longueurZTuile);
 		gestionnaire.obtenirCase (0, 0).construire (new Batiment(DataManager.dataManager.getTypeDeBatiment("Vaisseau")));
 		generateur.creerMondeAleatoire (gestionnaire.cases);
+
+		iGeneral.sprite = Colonie.instance.conseillers [CategoriesConseiller.GENERAL].faction.sprite;
+		iScientifique.sprite = Colonie.instance.conseillers [CategoriesConseiller.SCIENTIFIQUE].faction.sprite;
+		iExplorateur.sprite = Colonie.instance.conseillers [CategoriesConseiller.EXPLORATEUR].faction.sprite;
+		iGouverneur.sprite = Colonie.instance.conseillers [CategoriesConseiller.GOUVERNEUR].faction.sprite;
+		iMinistre.sprite = Colonie.instance.conseillers [CategoriesConseiller.MINISTRE].faction.sprite;
 	}
 
 

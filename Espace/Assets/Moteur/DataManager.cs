@@ -15,15 +15,18 @@ namespace AssemblyCSharp
 		public static DataManager dataManager; //Permet l'accès aux data n'importe où dans l'application! (On fait pas de l'ingé-log ici :p)
 		public static string dataPath;
 
+		private System.Random random;
 
 		/*----Data----*/
 		public List<TypeDeBatiment> typesDeBatiment = new List<TypeDeBatiment>();
 		public List<Evenement> listEvenement = new List<Evenement>();
+		public List<Faction> listeFactions = new List<Faction>();
 		/*------------*/
 
 		public DataManager ()
 		{
 			dataManager = this;
+			random = new System.Random ();
 			load ();
 		}
 
@@ -36,6 +39,7 @@ namespace AssemblyCSharp
 
 			//Chargement des autres fichiers
 			loadBatiments ();
+			loadFactions ();
 
 			XmlDocument doc = new XmlDocument ();
 			//doc.Load (dataPath + "/Batiments.xml");
@@ -106,6 +110,23 @@ namespace AssemblyCSharp
 
 		}
 
+		public void loadFactions() {
+			XmlDocument doc = new XmlDocument ();
+			doc.Load (dataPath + "/Factions.xml");
+			XmlNodeList nodes = doc.DocumentElement.ChildNodes;
+			foreach (XmlNode node in nodes) {
+				Faction f = new Faction();
+				f.nom = node.SelectSingleNode ("Nom").InnerText;
+
+				f.sprite = Resources.Load<Sprite>("SPRITE/Personnages/" + node.SelectSingleNode ("Sprite").InnerText);
+			//	SpriteRenderer spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
+			//	spriteRenderer.sprite = Resources.Load<UnityEngine.Sprite>("Textures/Interface/button");
+				
+				listeFactions.Add(f);
+			}
+			
+		}
+
 
 		private void chargerUnEffet(XmlNode node, TypeDeBatiment b) {
 			String type = node.SelectSingleNode ("Type").InnerText;
@@ -130,6 +151,18 @@ namespace AssemblyCSharp
 			return null;
 		}
 
+		public Faction getFaction(String nom) {
+			foreach (Faction f in listeFactions) {
+				if (f.nom.Equals(nom)) {
+					return f;
+				}
+			}
+			return null;
+		}
+
+		public Faction getRandomFaction() {
+			return listeFactions[random.Next(listeFactions.Count)];
+		}
 		/**
 		 * 		public List<PoliticOrientation> loadPoliticOrientation() {
 
