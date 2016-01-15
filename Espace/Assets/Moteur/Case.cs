@@ -15,12 +15,18 @@ namespace AssemblyCSharp
 		Batiment batiment;
 		public int coordX, coordZ;
 		public static Case caseSelectionnee;
+		public Dictionary<ValeurDeCase,double> valeurs = new Dictionary<ValeurDeCase, double> ();
 
 		public Case (GameObject tuile, int coordX, int coordZ)
 		{
 			this.coordX = coordX;
 			this.coordZ = coordZ;
 			this.tuile = tuile;
+
+			foreach (ValeurDeCase vdc in DataManager.dataManager.listeValeursDeCase) {
+				valeurs.Add(vdc,0);
+			}
+
 		}
 
 		public void changerTerrain(Terrains t, bool cache) {

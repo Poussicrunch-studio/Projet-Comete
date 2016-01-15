@@ -21,6 +21,7 @@ namespace AssemblyCSharp
 		public List<TypeDeBatiment> typesDeBatiment = new List<TypeDeBatiment>();
 		public List<Evenement> listEvenement = new List<Evenement>();
 		public List<Faction> listeFactions = new List<Faction>();
+		public List<ValeurDeCase> listeValeursDeCase = new List<ValeurDeCase>();
 		/*------------*/
 
 		public DataManager ()
@@ -108,6 +109,18 @@ namespace AssemblyCSharp
 				typesDeBatiment.Add(b);
 			}
 
+		}
+
+		public void chargerValeurDeCase() {
+			XmlDocument doc = new XmlDocument ();
+			doc.Load (dataPath + "/ValeursDeCase.xml");
+			XmlNodeList nodes = doc.DocumentElement.ChildNodes;
+			foreach (XmlNode node in nodes) {
+				ValeurDeCase vdc = new ValeurDeCase();
+				vdc.nom = node.SelectSingleNode ("Nom").InnerText;
+
+				listeValeursDeCase.Add(vdc);
+			}
 		}
 
 		public void loadFactions() {
