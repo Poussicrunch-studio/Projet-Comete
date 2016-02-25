@@ -27,4 +27,9 @@
 		<Sprite>ecolo</Sprite>
 	</Faction>
 	
+	<Faction>
+		<Nom>Adorateurs de Belzebuth</Nom>
+		<Sprite>belzebut</Sprite>
+	</Faction>
+	
 </Factions>
