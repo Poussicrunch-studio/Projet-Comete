@@ -29,6 +29,7 @@
 	
 	<Faction>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<Nom>Corporation minière</Nom>
 		<Sprite>miniere</Sprite>
 	</Faction>
@@ -36,6 +37,10 @@
 	<Faction>
 		<Nom>La comission</Nom>
 		<Sprite>bureaucrate</Sprite>
+=======
+		<Nom>Adorateurs de Belzebuth</Nom>
+		<Sprite>belzebut</Sprite>
+>>>>>>> origin/master
 =======
 		<Nom>Adorateurs de Belzebuth</Nom>
 		<Sprite>belzebut</Sprite>
