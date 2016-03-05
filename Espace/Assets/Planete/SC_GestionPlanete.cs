@@ -49,6 +49,8 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public Button bScientifique;
 	public Button bGouverneur;
 
+	public Dropdown dValeurDeCaseObservable;
+
 	public Image iGeneral;
 	public Image iMinistre;
 	public Image iExplorateur;
@@ -66,6 +68,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 
 	//Etat du jeu
 	public bool propositionEnCours = false;
+	public bool valeurDeCaseEstAffichee = false;
 	public Proposition propositionActuelle;
 
 	public SC_GenerateurPlanete generateur;
@@ -108,8 +111,21 @@ public class SC_GestionPlanete : MonoBehaviour {
 		iExplorateur.sprite = Colonie.instance.conseillers [CategoriesConseiller.EXPLORATEUR].faction.sprite;
 		iGouverneur.sprite = Colonie.instance.conseillers [CategoriesConseiller.GOUVERNEUR].faction.sprite;
 		iMinistre.sprite = Colonie.instance.conseillers [CategoriesConseiller.MINISTRE].faction.sprite;
+	
+		initialiserUI ();
 	}
 
+	private void initialiserUI() {
+		List<Dropdown.OptionData> options = new List<Dropdown.OptionData>();
+		Debug.Log("Initialisation de l'UI");
+
+		foreach (ValeurDeCase vdc in DataManager.dataManager.listeValeursDeCase) {
+			Debug.Log(vdc.nom);
+			options.Add(new Dropdown.OptionData(vdc.nom));
+		}
+		dValeurDeCaseObservable.AddOptions(options);
+
+	}
 
 
 	private void creerLesCasesInitiales() {
@@ -124,6 +140,24 @@ public class SC_GestionPlanete : MonoBehaviour {
 	void Update () {
 		gererLaSouris ();
 		gererLesInfos ();
+
+	}
+
+	public void switchAffichageValeurDeCase() {
+		valeurDeCaseEstAffichee = !valeurDeCaseEstAffichee;
+		Debug.Log ("Switch to : " + valeurDeCaseEstAffichee);
+		mettreAJourDesSurcases ();
+	}
+
+	public void mettreAJourDesSurcases() {
+		if (valeurDeCaseEstAffichee) {
+			GameObject[] surcases = GameObject.FindGameObjectsWithTag("Surcase");
+			foreach (GameObject go in surcases) {
+				Debug.Log("surcase");
+				go.GetComponent<Renderer>().material.SetColor("_SpecColor", Color.red);
+			
+			}
+		}
 
 	}
 

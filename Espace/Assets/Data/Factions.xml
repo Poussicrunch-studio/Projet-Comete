@@ -27,4 +27,19 @@
 		<Sprite>ecolo</Sprite>
 	</Faction>
 	
+	<Faction>
+<<<<<<< HEAD
+		<Nom>Corporation minière</Nom>
+		<Sprite>miniere</Sprite>
+	</Faction>
+	
+	<Faction>
+		<Nom>La comission</Nom>
+		<Sprite>bureaucrate</Sprite>
+=======
+		<Nom>Adorateurs de Belzebuth</Nom>
+		<Sprite>belzebut</Sprite>
+>>>>>>> origin/master
+	</Faction>
+	
 </Factions>

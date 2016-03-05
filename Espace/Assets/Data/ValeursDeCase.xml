@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<ValeursDeCase>
+
+	<ValeurDeCase>
+		<Nom>Ecologie</Nom>
+	</ValeurDeCase>
+
+	<ValeurDeCase>
+		<Nom>Ordre public</Nom>
+	</ValeurDeCase>
+	
+	<ValeurDeCase>
+		<Nom>Efficacité minière</Nom>
+	</ValeurDeCase>
+	
+	<ValeurDeCase>
+		<Nom>Efficacité agricole</Nom>
+	</ValeurDeCase>
+	
+	<ValeurDeCase>
+		<Nom>Efficacité industrielle</Nom>
+	</ValeurDeCase>
+	
+	<ValeurDeCase>
+		<Nom>Efficacité scientifique</Nom>
+	</ValeurDeCase>
+	
+	<ValeurDeCase>
+		<Nom>Efficacité administrative</Nom>
+	</ValeurDeCase>
+	
+</ValeursDeCase>

@@ -39,8 +39,10 @@ namespace AssemblyCSharp
 			Debug.Log (Application.dataPath + "/Data");
 
 			//Chargement des autres fichiers
+			chargerValeurDeCase ();
 			loadBatiments ();
 			loadFactions ();
+
 
 			XmlDocument doc = new XmlDocument ();
 			//doc.Load (dataPath + "/Batiments.xml");
