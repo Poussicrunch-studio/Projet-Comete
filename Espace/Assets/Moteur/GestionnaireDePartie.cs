@@ -28,10 +28,10 @@ namespace AssemblyCSharp
 		}
 
 		public void jouerUnTour() {
+			colonie.jouer ();
 			foreach (Case kase in cases) {
 				kase.jouer();
 			}
-			colonie.jouer ();
 			tour++;
 		}
 

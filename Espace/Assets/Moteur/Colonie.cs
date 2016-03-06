@@ -14,6 +14,7 @@ namespace AssemblyCSharp
 
 		public List<Colon> colonsEnStase = new List<Colon> ();
 		public List<Colon> colonsEveilles = new List<Colon> ();
+		public float moral = 100.0f;
 
 		public Colonie ()
 		{
@@ -34,6 +35,9 @@ namespace AssemblyCSharp
 			reserves.Remove (Ressources.OXYGENE);
 			reserves.Add (Ressources.OXYGENE,50.0F);
 
+			reserves.Remove (Ressources.ENERGIE);
+			reserves.Add (Ressources.ENERGIE,3000.0F);
+
 		//	for (int i = 0 ; i < Enum.GetValues(typeof(CategoriesConseiller).Le
 			foreach (CategoriesConseiller c in Enum.GetValues(typeof(CategoriesConseiller))) {
 				Conseiller conseiller = new Conseiller(c);
@@ -51,6 +55,27 @@ namespace AssemblyCSharp
 			foreach (CategoriesConseiller c in conseillers.Keys) {
 				conseillers[c].jouer();
 			}
+			for (int i = colonsEnStase.Count - 1; i >= 0; i--) {
+				if (!consommer (Ressources.ENERGIE, 3)) tuerColon(colonsEnStase[i]);
+			}
+
+			for (int i = colonsEveilles.Count - 1; i >= 0; i--) {
+				//TODO : éviter que le colon consomme un peu si il meurt sur O2 ou nourriture
+				if (!consommer (Ressources.EAU, 1)) tuerColon(colonsEveilles[i]);
+				if (!consommer (Ressources.OXYGENE, 1)) tuerColon(colonsEveilles[i]);
+				if (!consommer (Ressources.NOURRITURE, 1)) tuerColon(colonsEveilles[i]);
+			}
+
+		}
+
+		public void tuerColon(Colon c) {
+			if (colonsEnStase.Contains (c)) {
+				colonsEnStase.Remove (c);
+			}
+			else if (colonsEveilles.Contains (c)) {
+				colonsEveilles.Remove (c);
+			}
+			moral--;
 		}
 
 		public float getQuantiteDeRessource(Ressources r) {
@@ -60,6 +85,15 @@ namespace AssemblyCSharp
 		public void produire(Ressources r, float quantite) {
 			reserves [r] += quantite;
 			//Debug.Log ("Nouvelles réserves :" + reserves [r]);
+		}
+
+		public bool consommer(Ressources r, float quantite) {
+			if (reserves [r] >= quantite) {
+				reserves [r] -= quantite;
+				return true;
+			} else {
+				return false;
+			}
 		}
 	}
 }
