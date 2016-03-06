@@ -16,6 +16,7 @@ namespace AssemblyCSharp
 		public static string dataPath;
 
 		private System.Random random;
+		private String langage = "Fr";
 
 		/*----Data----*/
 		public List<TypeDeBatiment> typesDeBatiment = new List<TypeDeBatiment>();
@@ -95,6 +96,7 @@ namespace AssemblyCSharp
 				b.poids = int.Parse (node.SelectSingleNode ("Poids").InnerText);
 				b.niveau = int.Parse (node.SelectSingleNode ("Niveau").InnerText);
 				b.nom = node.SelectSingleNode ("Nom").InnerText;
+				b.description = node.SelectSingleNode ("Description_" + langage).InnerText;
 				Debug.Log (node.SelectSingleNode ("Categorie").InnerText);
 				if (node.SelectSingleNode ("Categorie").InnerText != "NULL") {
 					b.categorie = (CategoriesConseiller) Enum.Parse (typeof(CategoriesConseiller), node.SelectSingleNode ("Categorie").InnerText);

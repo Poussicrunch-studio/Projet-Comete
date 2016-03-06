@@ -18,5 +18,6 @@ public class SC_PanelDataBatiment : MonoBehaviour {
 
 	public void mettreAJour(Batiment bat) {
 		titre.text = bat.getNom ();
+		texte.text = bat.getDescription ();
 	}
 }

@@ -8,6 +8,7 @@
 		<Niveau>0</Niveau>
 		<Poids>0</Poids>
 		<Prefab>Navette_Prefab</Prefab>
+		<Description_Fr>La navette.</Description_Fr>
 	</Batiment>
 	
 	<Batiment>
@@ -21,11 +22,7 @@
 			<Ressource>EAU</Ressource>
 			<Quantite>10</Quantite>
 		</Effet>
-		<Effet>
-			<Type>PRODUIRE</Type>
-			<Ressource>MINERAI</Ressource>
-			<Quantite>10</Quantite>
-		</Effet>
+		<Description_Fr>Le forage produit de l'eau. C'est cool pour boire.</Description_Fr>
 	</Batiment>
 
 	<Batiment>
@@ -39,6 +36,7 @@
 			<Ressource>MINERAI</Ressource>
 			<Quantite>10</Quantite>
 		</Effet>
+		<Description_Fr>Des maisons dans lesquelles on peut mettre des colons.</Description_Fr>
 	</Batiment>
 
 </Batiments>

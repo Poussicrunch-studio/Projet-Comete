@@ -24,6 +24,11 @@ namespace AssemblyCSharp
 			return type.nom;
 		}
 
+		/* Retourne la description du bâtiment. */
+		public String getDescription() {
+			return type.description;
+		}
+
 		/*Un bâtiment contient une liste d'effets.
 		 * Lorsqu'on lui demande de jouer, il applique tous ses effets les
 		 * uns après les autres. L'effet n'est pas propre au bâtiment, il 

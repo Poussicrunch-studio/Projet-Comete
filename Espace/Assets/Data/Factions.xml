@@ -43,13 +43,6 @@
 		<Ordre> 0 </Ordre>
 		<Bien> 0 </Bien>
 	</Faction>
-	
-	<Faction>
-		<Nom>La comission</Nom>
-		<Sprite>bureaucrate</Sprite>
-		<Ordre> 0 </Ordre>
-		<Bien> 0 </Bien> 
-	</Faction>
 
 	<Faction>
 		<Nom>Adorateurs de Belzebuth</Nom>

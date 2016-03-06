@@ -13,6 +13,7 @@ namespace AssemblyCSharp
 		public UnityEngine.Object prefab;
 		public int poids;
 		public List<Effet> effets = new List<Effet> ();
+		public String description;
 
 
 		public TypeDeBatiment ()
