@@ -46,7 +46,7 @@ namespace AssemblyCSharp
 
 			XmlDocument doc = new XmlDocument ();
 			//doc.Load (dataPath + "/Batiments.xml");
-			doc.Load (dataPath + "/evenements.xml");
+			doc.Load (dataPath + "/Evenements.xml");
 			XmlNodeList nodes = doc.DocumentElement.ChildNodes;
 			foreach (XmlNode node in nodes) 
 			{

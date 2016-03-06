@@ -3,48 +3,59 @@
 <Factions>
 
 	<Faction>
-		<Nom>Bureaucrates</Nom>
+		<Nom>La commission</Nom>
 		<Sprite>bureaucrate</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien>
 	</Faction>
 	
 	<Faction>
 		<Nom>Mafia</Nom>
 		<Sprite>mafia</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien>
 	</Faction>
 
 	<Faction>
 		<Nom>Hackers</Nom>
 		<Sprite>hacker</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien>
 	</Faction>
 	
 	<Faction>
 		<Nom>Cultistes</Nom>
 		<Sprite>cultiste</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien>
 	</Faction>
 	
 	<Faction>
 		<Nom>Ecologistes</Nom>
 		<Sprite>ecolo</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien>
 	</Faction>
 	
 	<Faction>
-<<<<<<< HEAD
-<<<<<<< HEAD
 		<Nom>Corporation minière</Nom>
 		<Sprite>miniere</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien>
 	</Faction>
 	
 	<Faction>
 		<Nom>La comission</Nom>
 		<Sprite>bureaucrate</Sprite>
-=======
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien> 
+	</Faction>
+
+	<Faction>
 		<Nom>Adorateurs de Belzebuth</Nom>
 		<Sprite>belzebut</Sprite>
->>>>>>> origin/master
-=======
-		<Nom>Adorateurs de Belzebuth</Nom>
-		<Sprite>belzebut</Sprite>
->>>>>>> origin/master
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien> 
 	</Faction>
 	
 </Factions>
