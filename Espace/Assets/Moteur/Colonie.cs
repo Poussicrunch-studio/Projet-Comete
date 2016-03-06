@@ -12,6 +12,9 @@ namespace AssemblyCSharp
 		public static Colonie instance;
 		public List<Batiment> batimentsDisponibles = new List<Batiment> ();
 
+		public List<Colon> colonsEnStase = new List<Colon> ();
+		public List<Colon> colonsEveilles = new List<Colon> ();
+
 		public Colonie ()
 		{
 			Debug.Log ("Creation de la colonie");
@@ -35,6 +38,12 @@ namespace AssemblyCSharp
 			foreach (CategoriesConseiller c in Enum.GetValues(typeof(CategoriesConseiller))) {
 				Conseiller conseiller = new Conseiller(c);
 				conseillers.Add(c,conseiller);
+			}
+		}
+
+		public void genererPopulationAleatoire(int nombreDeColons) {
+			for (int i = 0; i < nombreDeColons; i++) {
+				colonsEnStase.Add (new Colon(DataManager.dataManager.getRandomColon()));
 			}
 		}
 

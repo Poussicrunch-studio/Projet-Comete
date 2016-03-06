@@ -36,6 +36,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public Text infoOxygene;
 	public Text infoEau;
 	public Text infoPopulation;
+	public Text infoPopulationEnStase;
 	public Text infoCredit;
 	public Text infoBiens;
 	public Text infoEnergie;
@@ -213,6 +214,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 		infoMinerai.text = "Minerai : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.MINERAI).ToString();
 		infoBiens.text = "Biens : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.BIENS).ToString();
 		infoEnergie.text = "Energie : " + gestionnaire.colonie.getQuantiteDeRessource (Ressources.ENERGIE).ToString();
+		infoPopulationEnStase.text = "En stase : " + gestionnaire.colonie.colonsEnStase.Count.ToString();
 	}
 
 

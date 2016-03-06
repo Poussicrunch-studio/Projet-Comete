@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<Colons>
+
+	<Colon>
+		<Nom>Ouvrier</Nom>
+		<Sprite>Koala</Sprite>
+	</Colon>
+
+	<Colon>
+		<Nom>Technicien</Nom>
+		<Sprite>Koala</Sprite>
+	</Colon>
+
+
+
+</Colons>

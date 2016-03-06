@@ -23,6 +23,7 @@ namespace AssemblyCSharp
 		public List<Evenement> listEvenement = new List<Evenement>();
 		public List<Faction> listeFactions = new List<Faction>();
 		public List<ValeurDeCase> listeValeursDeCase = new List<ValeurDeCase>();
+		public List<TypeColon> listeTypesColon = new List<TypeColon>();
 		/*------------*/
 
 		public DataManager ()
@@ -41,6 +42,7 @@ namespace AssemblyCSharp
 
 			//Chargement des autres fichiers
 			chargerValeurDeCase ();
+			loadColons ();
 			loadBatiments ();
 			loadFactions ();
 
@@ -144,6 +146,19 @@ namespace AssemblyCSharp
 			
 		}
 
+		public void loadColons() {
+			XmlDocument doc = new XmlDocument ();
+			doc.Load (dataPath + "/Colons.xml");
+			XmlNodeList nodes = doc.DocumentElement.ChildNodes;
+			foreach (XmlNode node in nodes) {
+				TypeColon tc = new TypeColon();
+				tc.nom = node.SelectSingleNode ("Nom").InnerText;
+
+				listeTypesColon.Add(tc);
+			}
+
+		}
+
 
 		private void chargerUnEffet(XmlNode node, TypeDeBatiment b) {
 			String type = node.SelectSingleNode ("Type").InnerText;
@@ -180,6 +195,11 @@ namespace AssemblyCSharp
 		public Faction getRandomFaction() {
 			return listeFactions[random.Next(listeFactions.Count)];
 		}
+
+		public TypeColon getRandomColon() {
+			return listeTypesColon[random.Next(listeTypesColon.Count)];
+		}
+
 		/**
 		 * 		public List<PoliticOrientation> loadPoliticOrientation() {
 

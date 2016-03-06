@@ -23,6 +23,7 @@ namespace AssemblyCSharp
 			DataManager dm = new DataManager ();
 			joueur = new Joueur ();
 			colonie = new Colonie ();
+			colonie.genererPopulationAleatoire (20);
 			instance = this;
 		}
 
