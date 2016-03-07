@@ -9,7 +9,17 @@
 	<ValeurDeCase>
 		<Nom>Ordre public</Nom>
 	</ValeurDeCase>
-	
+
+	<ValeurDeCase>
+		<Nom>Temperature</Nom>
+		<Temperature>TRUE</Temperature>
+	</ValeurDeCase>
+
+	<ValeurDeCase>
+		<Nom>Humidite</Nom>
+		<Humidite>TRUE</Humidite>
+	</ValeurDeCase>
+
 	<ValeurDeCase>
 		<Nom>Efficacité minière</Nom>
 	</ValeurDeCase>
