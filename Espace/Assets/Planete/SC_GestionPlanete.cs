@@ -28,6 +28,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public GameObject panelInfoPropositions;
 	public GameObject panelSelectionBatiment;
 	public GameObject panelInfoBatiment;
+	public GameObject panelBulleDeDialogue;
 
 	public SC_PanelInfoProp scriptPanelInfoPropositions;
 
@@ -74,6 +75,9 @@ public class SC_GestionPlanete : MonoBehaviour {
 
 	public SC_GenerateurPlanete generateur;
 
+	//Pour les dialogues
+	public GestionnaireDeDialogue dialogues;
+
 	/* Je propose une terminologie pour manipuler les hexagones :
 	 * l'hexagone++ d'un hexagone donné est celui positionné en haut à droite (+x+y)
 	 * Le += juste à droite (+x=y), et ainsi de suite.
@@ -95,6 +99,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 	void Start () {
 		globalPrefabs.LoadAll ("PREFAB");
 		gestionnaire = new GestionnaireDePartie ();
+		dialogues = new GestionnaireDeDialogue (this);
 
 		longueurXTuile = modeleTuile.GetComponent<Renderer>().bounds.size.x;
 		longueurZTuile = modeleTuile.GetComponent<Renderer>().bounds.size.z;
@@ -141,6 +146,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 	void Update () {
 		gererLaSouris ();
 		gererLesInfos ();
+		dialogues.mettreAJour ();
 
 	}
 

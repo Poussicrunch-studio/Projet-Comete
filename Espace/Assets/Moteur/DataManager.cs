@@ -24,6 +24,7 @@ namespace AssemblyCSharp
 		public List<Faction> listeFactions = new List<Faction>();
 		public List<ValeurDeCase> listeValeursDeCase = new List<ValeurDeCase>();
 		public List<TypeColon> listeTypesColon = new List<TypeColon>();
+		public List<Dialogue> listeDialogue = new List<Dialogue>();
 		/*------------*/
 
 		public DataManager ()
@@ -45,6 +46,7 @@ namespace AssemblyCSharp
 			loadColons ();
 			loadBatiments ();
 			loadFactions ();
+			loadDialogues ();
 
 
 			XmlDocument doc = new XmlDocument ();
@@ -143,8 +145,27 @@ namespace AssemblyCSharp
 				
 				listeFactions.Add(f);
 			}
-			
+
 		}
+
+		public void loadDialogues() {
+			XmlDocument doc = new XmlDocument ();
+			doc.Load (dataPath + "/Dialogues.xml");
+			XmlNodeList nodes = doc.DocumentElement.ChildNodes;
+			foreach (XmlNode node in nodes) {
+				Dialogue d = new Dialogue();
+				d.texte = node.SelectSingleNode ("Texte").InnerText;
+				d.poids = double.Parse (node.SelectSingleNode ("Poids").InnerText);
+				if (node.SelectSingleNode ("Type").InnerText != "NULL") {
+					d.type = (TypeDeDialogue) Enum.Parse (typeof(TypeDeDialogue), node.SelectSingleNode ("Type").InnerText);
+				}
+				d.faction = this.getFaction(node.SelectSingleNode ("Faction").InnerText);
+
+				listeDialogue.Add(d);
+			}
+
+		}
+
 
 		public void loadColons() {
 			XmlDocument doc = new XmlDocument ();

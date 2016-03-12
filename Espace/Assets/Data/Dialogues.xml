@@ -1,2 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 
+<Dialogues>
+
+	<Dialogue>
+		<Faction>La Mafia</Faction>
+		<Type>BLABLA</Type>
+		<Texte>Je mangerai bien une pizza.</Texte>
+		<Poids>80</Poids>
+	</Dialogue>
+
+	<Dialogue>
+		<Faction>La Mafia</Faction>
+		<Type>BLABLA</Type>
+		<Texte>J'ai une offre que vous ne pourrez pas refuser.</Texte>
+		<Poids>35</Poids>
+	</Dialogue>
+
+	<Dialogue>
+		<Faction>La Commission</Faction>
+		<Type>BLABLA</Type>
+		<Texte>J'ai un document à vous faire signer.</Texte>
+		<Poids>35</Poids>
+	</Dialogue>
+</Dialogues>
