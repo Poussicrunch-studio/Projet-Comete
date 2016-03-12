@@ -50,5 +50,82 @@
 		<Ordre> 0 </Ordre>
 		<Bien> 0 </Bien> 
 	</Faction>
-	
+
+	<Faction>
+		<Nom>World Media Company</Nom>
+		<Sprite>communication</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien> 
+	</Faction>
+
+	<Faction>
+		<Nom>Hippie</Nom>
+		<Sprite>hippie</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien> 
+	</Faction>
+
+	<Faction>
+		<Nom>Forces armées de la république du mal</Nom>
+		<Sprite>militaire_dangereux</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien> 
+	</Faction>
+
+	<Faction>
+		<Nom>Forces de défense planétaire</Nom>
+		<Sprite>militaire_gentil</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien> 
+	</Faction>
+
+	<Faction>
+		<Nom>Big Corp</Nom>
+		<Sprite>multinationales</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien> 
+	</Faction>
+
+	<Faction>
+		<Nom>Libre confrérie des robots-mutants</Nom>
+		<Sprite>mutant_robot</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien> 
+	</Faction>
+
+	<Faction>
+		<Nom>Harmonie</Nom>
+		<Sprite>religieux</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien> 
+	</Faction>
+
+	<Faction>
+		<Nom>Reptiliens</Nom>
+		<Sprite>reptiliens</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien> 
+	</Faction>
+
+	<Faction>
+		<Nom>Scientifiques</Nom>
+		<Sprite>scientifique</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien> 
+	</Faction>
+
+	<Faction>
+		<Nom>Tropicus</Nom>
+		<Sprite>tropika</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien> 
+	</Faction>
+
+	<Faction>
+		<Nom>Tropicus</Nom>
+		<Sprite>tropika</Sprite>
+		<Ordre> 0 </Ordre>
+		<Bien> 0 </Bien> 
+	</Faction>
+
 </Factions>
