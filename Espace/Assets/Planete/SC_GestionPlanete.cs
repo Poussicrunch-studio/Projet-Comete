@@ -58,6 +58,8 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public Image iExplorateur;
 	public Image iScientifique;
 	public Image iGouverneur;
+	Dictionary<Faction, Image> imageDesFaction = new Dictionary<Faction, Image>();
+
 
 	public int tailleDuMondeX = 50;
 	public int tailleDuMondeZ = 50;
@@ -118,6 +120,14 @@ public class SC_GestionPlanete : MonoBehaviour {
 		iGouverneur.sprite = Colonie.instance.conseillers [CategoriesConseiller.GOUVERNEUR].faction.sprite;
 		iMinistre.sprite = Colonie.instance.conseillers [CategoriesConseiller.MINISTRE].faction.sprite;
 	
+		/*Pour accéder rapidement à l'image de la faction pour es dialogues*/
+		imageDesFaction.Add (Colonie.instance.conseillers [CategoriesConseiller.GENERAL].faction, iGeneral);
+		imageDesFaction.Add (Colonie.instance.conseillers [CategoriesConseiller.SCIENTIFIQUE].faction, iScientifique);
+		imageDesFaction.Add (Colonie.instance.conseillers [CategoriesConseiller.EXPLORATEUR].faction, iExplorateur);
+		imageDesFaction.Add (Colonie.instance.conseillers [CategoriesConseiller.GOUVERNEUR].faction, iGouverneur);
+		imageDesFaction.Add (Colonie.instance.conseillers [CategoriesConseiller.MINISTRE].faction, iMinistre);
+
+
 		initialiserUI ();
 	}
 
@@ -234,9 +244,14 @@ public class SC_GestionPlanete : MonoBehaviour {
 		afficherLesPropositions ();
 		panelInfoBatiment.SetActive(false);
 		panelSelectionBatiment.SetActive(false);
-	
 	}
 
+	public void creerUnDialogue(Dialogue dialogue) {
+		GameObject t = Instantiate(panelBulleDeDialogue);
+		t.transform.SetParent(canvasActions.transform, false);
+		SC_BulleDeDialogue script = t.GetComponent<SC_BulleDeDialogue> ();
+		script.texte.text = dialogue.texte;
+	}
 
 
 	public void jouerSonAction() {

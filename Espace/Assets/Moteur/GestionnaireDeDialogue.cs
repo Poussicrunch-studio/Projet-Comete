@@ -29,6 +29,7 @@ namespace AssemblyCSharp
 				tamponTemps -= tempsEntreDeuxDialogues;
 				Dialogue d = selectionnerUnDialogue ();
 				Debug.Log (d.texte);
+				gestionnaire.creerUnDialogue (d);
 			}
 		}
 
