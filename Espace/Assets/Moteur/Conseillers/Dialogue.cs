@@ -13,6 +13,10 @@ namespace AssemblyCSharp
 		public Dialogue ()
 		{
 		}
+
+		public double getPoids() {
+			return poids;
+		}
 	}
 }
 

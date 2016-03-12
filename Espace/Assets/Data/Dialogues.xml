@@ -22,4 +22,12 @@
 		<Texte>J'ai un document à vous faire signer.</Texte>
 		<Poids>35</Poids>
 	</Dialogue>
+
+	<Dialogue>
+		<Faction>Les Ecologistes</Faction>
+		<Type>BLABLA</Type>
+		<Texte>J'aime les arbres.</Texte>
+		<Poids>35</Poids>
+	</Dialogue>
+
 </Dialogues>

@@ -28,6 +28,9 @@ namespace AssemblyCSharp
 
 		public void definirFactionAleatoire() {
 			faction = DataManager.dataManager.getRandomFaction ();
+			while (Colonie.instance.factionEstPresente (faction)) {
+				faction = DataManager.dataManager.getRandomFaction ();
+			}
 		}
 
 

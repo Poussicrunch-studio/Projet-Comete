@@ -3,14 +3,14 @@
 <Factions>
 
 	<Faction>
-		<Nom>La commission</Nom>
+		<Nom>La Commission</Nom>
 		<Sprite>bureaucrate</Sprite>
 		<Ordre> 0 </Ordre>
 		<Bien> 0 </Bien>
 	</Faction>
 	
 	<Faction>
-		<Nom>Mafia</Nom>
+		<Nom>La Mafia</Nom>
 		<Sprite>mafia</Sprite>
 		<Ordre> 0 </Ordre>
 		<Bien> 0 </Bien>
@@ -31,7 +31,7 @@
 	</Faction>
 	
 	<Faction>
-		<Nom>Ecologistes</Nom>
+		<Nom>Les Ecologistes</Nom>
 		<Sprite>ecolo</Sprite>
 		<Ordre> 0 </Ordre>
 		<Bien> 0 </Bien>

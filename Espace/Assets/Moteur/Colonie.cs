@@ -95,6 +95,16 @@ namespace AssemblyCSharp
 				return false;
 			}
 		}
+
+		public bool factionEstPresente (Faction faction) {
+			bool estPresent = false;
+			foreach (Conseiller c in conseillers.Values) {
+				if (c.faction.Equals (faction)) {
+					estPresent = true;
+				}
+			}
+			return estPresent;
+		}
 	}
 }
 
