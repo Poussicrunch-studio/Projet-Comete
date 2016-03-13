@@ -45,4 +45,8 @@ public class SC_Case : MonoBehaviour {
 		SC_GestionPlanete.instance.casesVisibles.Remove (this);
 	
 	}
+
+	public void setCouleurSurcase(ValeurDeCase valeurDeCase) {
+		this.surcase.GetComponent<Renderer>().material.SetColor("_Color", new Color(1,1,1));
+	}
 }

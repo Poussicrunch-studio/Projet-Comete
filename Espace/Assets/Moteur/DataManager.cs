@@ -204,6 +204,15 @@ namespace AssemblyCSharp
 			return null;
 		}
 
+		public ValeurDeCase getValeurDeCase(String nom) {
+			foreach (ValeurDeCase v in listeValeursDeCase) {
+				if (v.nom.Equals(nom)) {
+					return v;
+				}
+			}
+			return null;
+		}
+
 		public Faction getFaction(String nom) {
 			foreach (Faction f in listeFactions) {
 				if (f.nom.Equals(nom)) {

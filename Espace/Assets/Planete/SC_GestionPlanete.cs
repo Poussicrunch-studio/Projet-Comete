@@ -169,8 +169,9 @@ public class SC_GestionPlanete : MonoBehaviour {
 
 	public void mettreAJourDesSurcases() {
 		if (valeurDeCaseEstAffichee) {
+			ValeurDeCase v = DataManager.dataManager.getValeurDeCase (dValeurDeCaseObservable.itemText.text);
 			foreach (SC_Case kase in casesVisibles) {
-				kase.surcase.GetComponent<Renderer>().material.SetColor("_Color", Color.yellow);
+				kase.setCouleurSurcase (v);
 				//kase.surcase.GetComponent<Renderer>().material.s;
 			}
 		}
