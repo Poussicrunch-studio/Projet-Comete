@@ -16,7 +16,7 @@
 		<Categorie>MINISTRE</Categorie>
 		<Niveau>0</Niveau>
 		<Poids>200</Poids>
-		<Prefab>Habitations</Prefab>
+		<Prefab>Usine</Prefab>
 		<Effet>
 			<Type>PRODUIRE</Type>
 			<Ressource>EAU</Ressource>
@@ -30,7 +30,7 @@
 		<Categorie>GOUVERNEUR</Categorie>
 		<Niveau>0</Niveau>
 		<Poids>175</Poids>
-		<Prefab>Usine</Prefab>
+		<Prefab>Habitations</Prefab>
 		<Effet>
 			<Type>PRODUIRE</Type>
 			<Ressource>MINERAI</Ressource>
@@ -40,17 +40,17 @@
 	</Batiment>
 
 	<Batiment>
-		<Nom>Chateau d'eau</Nom>
+		<Nom>Panneau solaire</Nom>
 		<Categorie>SCIENTIFIQUE</Categorie>
 		<Niveau>0</Niveau>
 		<Poids>200</Poids>
-		<Prefab>chateau_deau_prefab</Prefab>
+		<Prefab>panneau solaires</Prefab>
 		<Effet>
 			<Type>PRODUIRE</Type>
-			<Ressource>O2</Ressource>
+			<Ressource>ENERGIE</Ressource>
 			<Quantite>10</Quantite>
 		</Effet>
-		<Description_Fr>On peut y boire de l'eau.</Description_Fr>
+		<Description_Fr>c'est pas forcement le soleil d'ailleurs</Description_Fr>
 	</Batiment>
 
 </Batiments>
