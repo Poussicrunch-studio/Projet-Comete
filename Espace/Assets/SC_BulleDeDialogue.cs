@@ -6,6 +6,7 @@ public class SC_BulleDeDialogue : MonoBehaviour {
 
 
 	public Text texte;
+	public double tempsDeVie;
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +15,9 @@ public class SC_BulleDeDialogue : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		tempsDeVie -= Time.deltaTime;
+		if (tempsDeVie <= 0) {
+			GameObject.Destroy (gameObject);
+		}
 	}
 }

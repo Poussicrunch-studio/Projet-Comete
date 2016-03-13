@@ -251,6 +251,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 		t.transform.SetParent(canvasActions.transform, false);
 		SC_BulleDeDialogue script = t.GetComponent<SC_BulleDeDialogue> ();
 		script.texte.text = dialogue.texte;
+		script.tempsDeVie = 8.0;
 	}
 
 
