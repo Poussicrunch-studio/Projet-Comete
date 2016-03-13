@@ -30,4 +30,12 @@
 		<Poids>35</Poids>
 	</Dialogue>
 
+	<Dialogue>
+		<Faction>Les Ecologistes</Faction>
+		<Type>BLABLA</Type>
+		<Texte>Go vegan!</Texte>
+		<Poids>5</Poids>
+		<!-- Là je ne sais pas car je suis stupide, mais ça devrait avoir lieu quand n a des élevages-->
+	</Dialogue>
+
 </Dialogues>
