@@ -17,6 +17,8 @@ namespace AssemblyCSharp
 			//base.jouer (batiment);
 			Colonie.instance.produire(ressource,quantite);
 		}
+
+
 	}
 }
 

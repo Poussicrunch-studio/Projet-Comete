@@ -6,6 +6,8 @@ public class SC_Case : MonoBehaviour {
 		
 	public Case kase;
 	public Transform selecteur;
+	public GameObject surcase;
+	public bool isVisible;
 
 	// Use this for initialization
 	void Start () {
@@ -31,5 +33,16 @@ public class SC_Case : MonoBehaviour {
 
 	public void deselectionner() {
 		Destroy (selecteur.gameObject);
+	}
+
+	public void OnBecameVisible() {
+		isVisible = true;
+		SC_GestionPlanete.instance.casesVisibles.Add (this);
+	}
+
+	public void OnBecameInvisible() {
+		isVisible = false;
+		SC_GestionPlanete.instance.casesVisibles.Remove (this);
+	
 	}
 }

@@ -74,6 +74,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public bool propositionEnCours = false;
 	public bool valeurDeCaseEstAffichee = false;
 	public Proposition propositionActuelle;
+	public List<SC_Case> casesVisibles = new List<SC_Case> (); 
 
 	public SC_GenerateurPlanete generateur;
 
@@ -168,11 +169,9 @@ public class SC_GestionPlanete : MonoBehaviour {
 
 	public void mettreAJourDesSurcases() {
 		if (valeurDeCaseEstAffichee) {
-			GameObject[] surcases = GameObject.FindGameObjectsWithTag("Surcase");
-			foreach (GameObject go in surcases) {
-				Debug.Log("surcase");
-				go.GetComponent<Renderer>().material.SetColor("_SpecColor", Color.red);
-			
+			foreach (SC_Case kase in casesVisibles) {
+				kase.surcase.GetComponent<Renderer>().material.SetColor("_Color", Color.yellow);
+				//kase.surcase.GetComponent<Renderer>().material.s;
 			}
 		}
 

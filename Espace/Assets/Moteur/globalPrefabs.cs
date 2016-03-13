@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;   //Required for Dictionary
+using System.Collections.Generic;
 
 public class globalPrefabs : ScriptableObject
 {
