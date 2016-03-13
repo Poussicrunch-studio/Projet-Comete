@@ -45,4 +45,12 @@
 		<!-- Là je ne sais pas car je suis stupide, mais ça devrait avoir lieu quand n a des élevages-->
 	</Dialogue>
 
+	<Dialogue>
+		<Faction>Forces armées de la république du mal</Faction>
+		<Type>AVERTISSEMENT</Type>
+		<Texte>Ne soyez pas trop gentil avec la popuation</Texte>
+		<Poids>10</Poids>
+		<!--alignement BIEN trop éloigné-->
+	</Dialogue>
+
 </Dialogues>

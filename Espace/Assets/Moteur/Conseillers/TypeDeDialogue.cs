@@ -4,7 +4,7 @@ namespace AssemblyCSharp
 {
 	public enum TypeDeDialogue
 	{
-		BLABLA
+		BLABLA,AVERTISSEMENT
 	}
 }
 
