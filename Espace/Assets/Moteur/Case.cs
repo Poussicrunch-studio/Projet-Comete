@@ -71,6 +71,7 @@ namespace AssemblyCSharp
 
 		public void construire(Batiment b) {
 			batiment = b;
+			b.kase = this;
 			GameObject go = (GameObject) MonoBehaviour.Instantiate(b.type.prefab, 
 			                                                       new Vector3(SC_GestionPlanete.getXofHexagone(coordX,coordZ), 0.0f, SC_GestionPlanete.getYofHexagone(coordX,coordZ)),
 			                          Quaternion.identity);

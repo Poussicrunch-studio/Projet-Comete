@@ -12,7 +12,7 @@ namespace AssemblyCSharp
 		{
 		}
 
-		override public void jouer(Batiment batiment) {
+		override public void appliquerEffet(Batiment batiment) {
 			//base.jouer (batiment);
 			Colonie.instance.consommer(ressource,quantite);
 		}

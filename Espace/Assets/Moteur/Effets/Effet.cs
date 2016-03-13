@@ -11,8 +11,13 @@ namespace AssemblyCSharp
 
 		}
 
-		virtual public void jouer(Batiment batiment) {
+		public void jouer(Batiment batiment) {
+			appliquerEffet (batiment);
+			appliquerEffetGraphique (batiment);
 		}
+
+		virtual public void appliquerEffet(Batiment batiment) {}
+		virtual public void appliquerEffetGraphique(Batiment batiment) {}
 
 
 	}

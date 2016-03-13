@@ -29,6 +29,7 @@ public class SC_GestionPlanete : MonoBehaviour {
 	public GameObject panelSelectionBatiment;
 	public GameObject panelInfoBatiment;
 	public GameObject panelBulleDeDialogue;
+	public GameObject particulesProductionRessources;
 
 	public SC_PanelInfoProp scriptPanelInfoPropositions;
 
