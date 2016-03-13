@@ -121,11 +121,4 @@
 		<Bien> 0 </Bien> 
 	</Faction>
 
-	<Faction>
-		<Nom>Tropicus</Nom>
-		<Sprite>tropika</Sprite>
-		<Ordre> 0 </Ordre>
-		<Bien> 0 </Bien> 
-	</Faction>
-
 </Factions>

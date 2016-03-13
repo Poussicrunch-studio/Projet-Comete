@@ -39,4 +39,18 @@
 		<Description_Fr>Des maisons dans lesquelles on peut mettre des colons.</Description_Fr>
 	</Batiment>
 
+	<Batiment>
+		<Nom>Chateau d'eau</Nom>
+		<Categorie>SCIENTIFIQUE</Categorie>
+		<Niveau>0</Niveau>
+		<Poids>200</Poids>
+		<Prefab>chateau_deau_prefab</Prefab>
+		<Effet>
+			<Type>PRODUIRE</Type>
+			<Ressource>O2</Ressource>
+			<Quantite>10</Quantite>
+		</Effet>
+		<Description_Fr>On peut y boire de l'eau.</Description_Fr>
+	</Batiment>
+
 </Batiments>

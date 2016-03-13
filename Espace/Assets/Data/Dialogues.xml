@@ -31,11 +31,30 @@
 	</Dialogue>
 
 	<Dialogue>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+		<Faction>Scientifiques</Faction>
+		<Type>BLABLA</Type>
+		<Texte>On aurait dû amener un arbre de technologie.</Texte>
+		<Poids>80</Poids>
+=======
+=======
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 		<Faction>Les Ecologistes</Faction>
 		<Type>BLABLA</Type>
 		<Texte>Go vegan!</Texte>
 		<Poids>5</Poids>
 		<!-- Là je ne sais pas car je suis stupide, mais ça devrait avoir lieu quand n a des élevages-->
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 	</Dialogue>
 
 </Dialogues>
