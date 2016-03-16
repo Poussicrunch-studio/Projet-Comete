@@ -11,6 +11,7 @@ namespace AssemblyCSharp
 	{
 		public Terrains terrain;  //c'est jacques !!!
 		public GameObject tuile;
+		public SC_Case scriptCase;
 		List<Case> cases = new List<Case> ();
 		Batiment batiment;
 		public int coordX, coordZ;
@@ -22,6 +23,7 @@ namespace AssemblyCSharp
 			this.coordX = coordX;
 			this.coordZ = coordZ;
 			this.tuile = tuile;
+			this.scriptCase = tuile.GetComponent<SC_Case> ();
 
 			foreach (ValeurDeCase vdc in DataManager.dataManager.listeValeursDeCase) {
 				valeurs.Add(vdc,0);

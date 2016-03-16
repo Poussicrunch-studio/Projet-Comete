@@ -186,10 +186,8 @@ namespace AssemblyCSharp
 			Effet effet = null;
 
 			if (type.Equals ("PRODUIRE")) {
-				EffetProduire e = new EffetProduire();
-				e.quantite = float.Parse(node.SelectSingleNode ("Quantite").InnerText);
-				e.ressource = (Ressources) Enum.Parse (typeof(Ressources), node.SelectSingleNode ("Ressource").InnerText);
-				effet = e;
+				effet = new EffetProduire(node);
+
 			}
 
 			b.ajouterEffet(effet);

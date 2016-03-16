@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml;
 
 namespace AssemblyCSharp
 {
@@ -8,7 +9,7 @@ namespace AssemblyCSharp
 		public float quantite;
 		public Ressources ressource;
 
-		public EffetConsommer ()
+		public EffetConsommer (XmlNode node)
 		{
 		}
 

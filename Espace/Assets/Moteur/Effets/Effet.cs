@@ -1,19 +1,28 @@
 using System;
 using UnityEngine;
+using System.Xml;
 
 namespace AssemblyCSharp
 {
 	public class Effet
 	{
-
 		public Effet ()
+		{
+
+		}
+
+
+		public Effet (XmlNode node)
 		{
 
 		}
 
 		public void jouer(Batiment batiment) {
 			appliquerEffet (batiment);
-			appliquerEffetGraphique (batiment);
+			if (batiment.kase.scriptCase.isVisible) {
+				appliquerEffetGraphique (batiment);
+			}
+				
 		}
 
 		virtual public void appliquerEffet(Batiment batiment) {}

@@ -1,6 +1,9 @@
 using System;
 using AssemblyCSharp;
 using UnityEngine;
+using System.Xml;
+
+
 namespace AssemblyCSharp
 {
 	public class EffetProduire : Effet
@@ -9,8 +12,10 @@ namespace AssemblyCSharp
 		public float quantite;
 		public Ressources ressource;
 
-		public EffetProduire ()
+		public EffetProduire (XmlNode node)
 		{
+			quantite = float.Parse(node.SelectSingleNode ("Quantite").InnerText);
+			ressource = (Ressources) Enum.Parse (typeof(Ressources), node.SelectSingleNode ("Ressource").InnerText);
 		}
 
 		override public void appliquerEffet(Batiment batiment) {
@@ -27,6 +32,8 @@ namespace AssemblyCSharp
 			script.particules.maxParticles = (int) Math.Round(quantite);
 
 		}
+
+
 
 
 
